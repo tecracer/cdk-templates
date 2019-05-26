@@ -1,0 +1,25 @@
+{
+  "name": "cdk-lambda-simple",
+  "version": "0.1.0",
+  "bin": {
+    "cdk-lambda-simple": "bin/cdk-lambda-simple.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/node": "8.10.45",
+    "typescript": "^3.3.3333",
+    "aws-cdk": "^0.31.0"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-lambda": "^0.32.0",
+    "@aws-cdk/cdk": "^0.32.0",
+    "install": "^0.12.2",
+    "npm": "^6.9.0",
+    "path": "^0.12.7",
+    "source-map-support": "^0.5.9"
+  }
+}
