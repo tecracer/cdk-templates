@@ -4,7 +4,7 @@ AWS CDK is th "Cloud Development Kit" which lets you programm CloudFormation Tem
 
 This is a collection of templates for the cdk
 
-## cdk-lambda-simple
+## lambda-simple
 
 Example of how to use lambda with cdk.
 Programming resources *and* Lambda in the same programming language.
