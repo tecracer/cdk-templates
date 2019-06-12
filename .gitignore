@@ -3,3 +3,9 @@ alb-update/node_modules
 alb-update/lib/cdk-lambda.js
 alb-update/index.js
 alb-update/cdk.context.json
+OpsCenterRole/package-lock.json
+vpc-bastion/cdk.out
+vpc-bastion/node_modules
+vpc-bastion/cdk.context.json
+vpc-bastion/index.js
+vpc-bastion/package-lock.json

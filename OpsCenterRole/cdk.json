@@ -1,0 +1,3 @@
+{
+  "app": "npx ts-node bin/ops_center_role.ts"
+}
