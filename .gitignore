@@ -9,3 +9,4 @@ vpc-bastion/node_modules
 vpc-bastion/cdk.context.json
 vpc-bastion/index.js
 vpc-bastion/package-lock.json
+OpsCenterRole/taskcat_outputs
