@@ -16,7 +16,7 @@ export class OpsCenterRoleStack extends cdk.Stack {
     opsPolicy.addStatements(new iam.PolicyStatement({
       actions: ['ssm:CreateOpsItem'],
       effect: iam.Effect.ALLOW,
-      principals: [new iam.AnyPrincipal],
+      resources: ['*'],
     }),);
     
     opsRole.attachInlinePolicy(opsPolicy);

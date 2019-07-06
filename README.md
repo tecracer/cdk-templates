@@ -54,9 +54,16 @@ Use role in any context.
 
 ## vpc-bastion
 
-VPC with a bastion host, which is managed by SSM
+cdk version 0.37
+
+VPC with a bastion host, which is managed by SSM.
+So no security groups.
 
 ### vpc-bastion has examples for
 
 - Instance ProfileRole
 - Searching EC2 image types
+
+### USage of vpc-bastion
+
+Connect to bastion host with Systems Manager session manager, or new mssh.
