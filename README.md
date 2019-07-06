@@ -40,11 +40,17 @@ Simple Lambda which takes all files from local lambda directory. It create the l
 
 ## OpsCenter Role
 
+cdk version 0.37
+
 Role for AWS OpsCenter
 
 ### OpsCenterRole has example for
 
 - Create IAM Role with own policy statements
+
+### Usage of OpsCenterRole
+
+Use role in any context.
 
 ## vpc-bastion
 

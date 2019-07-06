@@ -1,4 +1,4 @@
-import cdk = require('@aws-cdk/cdk');
+import cdk = require('@aws-cdk/core');
 import iam = require('@aws-cdk/aws-iam');
 
 export class OpsCenterRoleStack extends cdk.Stack {
@@ -13,7 +13,11 @@ export class OpsCenterRoleStack extends cdk.Stack {
     const opsPolicy = new iam.Policy(this, "opsCenterPolicy",{
       policyName: "opsCenterPolicy",
     })
-    opsPolicy.addStatement(new iam.PolicyStatement().addAction('ssm:CreateOpsItem').addResource('*'));
+    opsPolicy.addStatements(new iam.PolicyStatement({
+      actions: ['ssm:CreateOpsItem'],
+      effect: iam.Effect.ALLOW,
+      principals: [new iam.AnyPrincipal],
+    }),);
     
     opsRole.attachInlinePolicy(opsPolicy);
 

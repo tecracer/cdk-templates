@@ -10,7 +10,7 @@ init-taskcat: ## Install taskcat
 	pip3 install taskcat
 
 
-test: ## Test Cloudformation
+test: synth ## Test Cloudformation
 	taskcat -c ./ci/taskcat.yml --exclude node_modules --exclude lib --exclude lib
 
 report: ## Test Report anzeigen
