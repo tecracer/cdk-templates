@@ -19,10 +19,10 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "@aws-cdk/aws-autoscaling": "^0.35.0",
-    "@aws-cdk/aws-ec2": "^0.35.0",
-    "@aws-cdk/aws-elasticloadbalancingv2": "^0.35.0",
-    "@aws-cdk/aws-iam": "^0.33.0",
-    "@aws-cdk/cdk": "^0.35.0"
+    "@aws-cdk/aws-autoscaling": "0.37.x",
+    "@aws-cdk/aws-ec2": "0.37.x",
+    "@aws-cdk/aws-elasticloadbalancingv2": "0.37.x",
+    "@aws-cdk/aws-iam": "^0.37.0",
+    "@aws-cdk/core": "0.37.x"
   }
 }
