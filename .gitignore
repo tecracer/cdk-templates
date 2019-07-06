@@ -20,3 +20,4 @@ lambda-simple/lib/cdk-lambda-simple-stack.js
 lambda-simple/lib/cdk-lambda-simple-stack.js
 lambda-simple/lib/cdk-lambda-simple-stack.js
 lambda-simple/bin/cdk-lambda-simple.js
+OpsCenterRole/templates/opscenterrole.template
