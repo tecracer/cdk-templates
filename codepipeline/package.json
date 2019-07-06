@@ -1,8 +1,8 @@
 {
-  "name": "cdk-lambda-simple",
+  "name": "codepipeline",
   "version": "0.1.0",
   "bin": {
-    "cdk-lambda-simple": "bin/cdk-lambda-simple.js"
+    "codepipeline": "bin/codepipeline.js"
   },
   "scripts": {
     "build": "tsc",
@@ -12,14 +12,12 @@
   "devDependencies": {
     "@types/node": "8.10.45",
     "typescript": "^3.3.3333",
-    "aws-cdk": "^0.36.1"
+    "ts-node": "^8.1.0",
+    "aws-cdk": "^0.34.0"
   },
   "dependencies": {
-    "@aws-cdk/aws-lambda": "^0.36.1",
-    "@aws-cdk/core": "^0.36.1",
-    "install": "^0.12.2",
-    "npm": "^6.9.0",
-    "path": "^0.12.7",
+    "@aws-cdk/aws-codepipeline": "^0.34.0",
+    "@aws-cdk/cdk": "^0.34.0",
     "source-map-support": "^0.5.9"
   }
 }

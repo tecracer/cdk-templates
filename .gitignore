@@ -10,3 +10,12 @@ vpc-bastion/cdk.context.json
 vpc-bastion/index.js
 vpc-bastion/package-lock.json
 OpsCenterRole/taskcat_outputs
+codepipeline/package-lock.json
+lambda-simple/cdk.out
+lambda-simple/package-lock.json
+lambda-simple/package-lock.json
+lambda-simple/lib/cdk-lambda-simple-stack.js
+lambda-simple/bin/cdk-lambda-simple.js
+lambda-simple/lib/cdk-lambda-simple-stack.js
+lambda-simple/lib/cdk-lambda-simple-stack.js
+lambda-simple/lib/cdk-lambda-simple-stack.js

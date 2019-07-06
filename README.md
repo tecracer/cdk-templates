@@ -36,5 +36,5 @@ VPC with a bastion host, which is managed by SSM
 
 Examples for:
 
-- Instance Profile7Role
+- Instance ProfileRole
 - Searching EC2 image types

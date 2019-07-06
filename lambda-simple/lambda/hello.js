@@ -4,7 +4,7 @@ exports.handler = async function(event) {
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'text/plain' },
-      body: `Hello, CDK again! You've hit ${event.path}\n`
+      body: `Hello, CDK 0.36.1 again! You've hit ${event.path}\n`
     };
   };
   
