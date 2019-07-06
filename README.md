@@ -8,7 +8,7 @@ This is a collection of templates for the cdk
 
 cdk version 0.37
 
-Simple application load balancer with "hello world" webserver on instance.
+Simple application load balancer with "hello world" webserver on instance. It spins up its own vpc for that.
 
 ### alb-update has examples for
 
@@ -17,17 +17,26 @@ Simple application load balancer with "hello world" webserver on instance.
 - EC2 Userdata in external file
 - Attach Role for SSM Session Manager to instance in ASG
 
-### Usage
+### Usage of alb-update
 
 - `cdk deploy`
 - Open LoadBalancer DNS in browser
 
 ## lambda-simple
 
+cdk version 0.37
+
+Simple Lambda which takes all files from local lambda directory. It create the lambda ressource and uploads the code.
+
 ### lambda-simple has examples for
 
 - lambda with local code (asset)
 - Programming resources *and* Lambda in the same programming language.
+
+### Usage of lambda-simple
+
+- `cdk deploy`
+- execute lambda
 
 ## OpsCenter Role
 
