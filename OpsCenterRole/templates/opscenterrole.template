@@ -22,7 +22,7 @@ Resources:
         Statement:
           - Action: ssm:CreateOpsItem
             Effect: Allow
-            Resource: "*"
+            Principal: "*"
         Version: "2012-10-17"
       PolicyName: opsCenterPolicy
       Roles:
@@ -32,5 +32,5 @@ Resources:
   CDKMetadata:
     Type: AWS::CDK::Metadata
     Properties:
-      Modules: aws-cdk=0.34.0,@aws-cdk/aws-iam=0.34.0,@aws-cdk/cdk=0.34.0,@aws-cdk/cx-api=0.34.0,@aws-cdk/region-info=0.34.0,jsii-runtime=node.js/v8.10.0
+      Modules: aws-cdk=0.37.0,@aws-cdk/aws-iam=0.37.0,@aws-cdk/core=0.37.0,@aws-cdk/cx-api=0.37.0,@aws-cdk/region-info=0.37.0,jsii-runtime=node.js/v8.10.0
 

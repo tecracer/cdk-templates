@@ -8,7 +8,7 @@ class VPCBastionStack extends cdk.Stack {
   constructor(app: cdk.App, id: string) {
     super(app, id);
     new ec2.Vpc(this, 'TheVPC',{
-      maxAZs: 2,
+      maxAzs: 2,
     });  
 
     const instanceRole = new iam.Role(this,'ssminstancerole',

@@ -15,12 +15,12 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/node": "^8.10.50",
-    "typescript": "^3.5.2"
+    "@types/node": "^12.6.2",
+    "typescript": "^3.5.3"
   },
   "dependencies": {
-    "@aws-cdk/aws-ec2": "0.37.x",
-    "@aws-cdk/aws-iam": "0.37.x",
-    "@aws-cdk/core": "0.37.x"
+    "@aws-cdk/aws-ec2": "1.0.x",
+    "@aws-cdk/aws-iam": "1.0.x",
+    "@aws-cdk/core": "1.0.x"
   }
 }

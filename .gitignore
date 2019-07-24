@@ -21,3 +21,7 @@ lambda-simple/lib/cdk-lambda-simple-stack.js
 lambda-simple/lib/cdk-lambda-simple-stack.js
 lambda-simple/bin/cdk-lambda-simple.js
 OpsCenterRole/templates/opscenterrole.template
+alb-update/package-lock.json
+lambda-simple/bin/cdk-lambda-simple.js
+lambda-simple/lambda/package-lock.json
+lambda-simple/package-lock.json
