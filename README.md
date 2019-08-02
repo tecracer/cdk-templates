@@ -4,9 +4,27 @@ AWS CDK is th "Cloud Development Kit" which lets you programm CloudFormation Tem
 
 This is a collection of templates for the cdk
 
-## alb-update
+## Tooling
 
-cdk version 0.37
+We use [tasks](https://taskfile.dev/#/) for scripting. 
+
+For switching profiles [awsume](https://github.com/trek10inc/awsume) is used.
+
+### Deploy Templates
+
+If you use `awsume`, then the env variable `AWSUME_PROFILE` is set. If you work with different accounts its better to call the cdk cli with profile parameter.
+
+So with awsume:
+
+`task deploy`
+
+Or with cdk directly:
+
+`cdk deploy`
+
+## Templates
+
+## alb-update
 
 Simple application load balancer with "hello world" webserver on instance. It spins up its own vpc for that.
 
@@ -22,9 +40,15 @@ Simple application load balancer with "hello world" webserver on instance. It sp
 - `cdk deploy`
 - Open LoadBalancer DNS in browser
 
-## lambda-simple
+## lambda-apigw
 
-cdk version 0.37
+Lambda with an api Gateway
+
+## lambda-schedule
+
+Simple lambda with CloudWatch event rule for daily triggering.
+
+## lambda-simple
 
 Simple Lambda which takes all files from local lambda directory. It create the lambda ressource and uploads the code.
 
@@ -33,14 +57,8 @@ Simple Lambda which takes all files from local lambda directory. It create the l
 - lambda with local code (asset)
 - Programming resources *and* Lambda in the same programming language.
 
-### Usage of lambda-simple
-
-- `cdk deploy`
-- execute lambda
 
 ## OpsCenter Role
-
-cdk version 0.37
 
 Role for AWS OpsCenter
 
@@ -54,7 +72,6 @@ Use role in any context.
 
 ## vpc-bastion
 
-cdk version 0.37
 
 VPC with a bastion host, which is managed by SSM.
 So no security groups.
@@ -64,6 +81,6 @@ So no security groups.
 - Instance ProfileRole
 - Searching EC2 image types
 
-### USage of vpc-bastion
+### Usage of vpc-bastion
 
 Connect to bastion host with Systems Manager session manager, or new mssh.

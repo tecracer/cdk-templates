@@ -25,3 +25,6 @@ alb-update/package-lock.json
 lambda-simple/bin/cdk-lambda-simple.js
 lambda-simple/lambda/package-lock.json
 lambda-simple/package-lock.json
+log
+lambda-simple/bin/cdk-lambda-simple.js
+lambda-schedule/index.html
