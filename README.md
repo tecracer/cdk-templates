@@ -57,7 +57,6 @@ Simple Lambda which takes all files from local lambda directory. It create the l
 - lambda with local code (asset)
 - Programming resources *and* Lambda in the same programming language.
 
-
 ## OpsCenter Role
 
 Role for AWS OpsCenter
@@ -71,7 +70,6 @@ Role for AWS OpsCenter
 Use role in any context.
 
 ## vpc-bastion
-
 
 VPC with a bastion host, which is managed by SSM.
 So no security groups.
