@@ -6,7 +6,7 @@ This is a collection of templates for the cdk
 
 ## Tooling
 
-We use [tasks](https://taskfile.dev/#/) for scripting. 
+We use [tasks](https://taskfile.dev/#/) for scripting.
 
 For switching profiles [awsume](https://github.com/trek10inc/awsume) is used.
 
