@@ -25,7 +25,8 @@ phases:
       - cd $CODEBUILD_SRC_DIR
       - git init
       - git submodule add  https://github.com/xaprb/story.git themes/story
-      - ls -l &&  hugo 
+      - ls -l 
+      - hugo --baseURL ${baseurl}
       - echo Build hugo on `date`
   post_build:
     commands:
