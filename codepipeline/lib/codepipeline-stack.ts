@@ -4,7 +4,7 @@ import { Repository } from '@aws-cdk/aws-codecommit'
 import { Pipeline, Artifact } from '@aws-cdk/aws-codepipeline';
 import {CodeBuildAction,CodeCommitSourceAction,CodeCommitTrigger } from '@aws-cdk/aws-codepipeline-actions';
 import {PolicyStatement,Effect} from '@aws-cdk/aws-iam';
-import { Bucket } from '@aws-cdk/aws-s3';
+import { Bucket, BucketAccessControl } from '@aws-cdk/aws-s3';
 
 
 export class CodepipelineStack extends cdk.Stack {
@@ -34,7 +34,13 @@ export class CodepipelineStack extends cdk.Stack {
     // =====
     // Websitebucket
     // new Bucket
-    const bucket = new Bucket(this,'websitebucket');
+    const bucket = new Bucket(this,'websitebucket',
+    {
+      websiteIndexDocument: "index.html",
+      websiteErrorDocument: "error.html",
+      accessControl: BucketAccessControl.PUBLIC_READ,
+
+    });
     const bucketPolicy = new PolicyStatement({
       effect: Effect.ALLOW,
       actions: [
@@ -48,6 +54,7 @@ export class CodepipelineStack extends cdk.Stack {
     bucketPolicy.addServicePrincipal("codebuild.amazonaws.com");
     bucket.addToResourcePolicy(bucketPolicy);
     const websitebucket: BuildEnvironmentVariable = { value: bucket.bucketName};
+    const websiteUrl: BuildEnvironmentVariable = { value: bucket.bucketWebsiteUrl};
     // or use existing bucket
     // const websitebucket: BuildEnvironmentVariable = { value: 'mywebsitebucketname};
     // =====
@@ -79,7 +86,8 @@ export class CodepipelineStack extends cdk.Stack {
       },
       environmentVariables: {
         'bucket':websitebucket,
-      }
+        'baseurl': websiteUrl,
+      },
     });
 
     project.addToRolePolicy(new PolicyStatement({
