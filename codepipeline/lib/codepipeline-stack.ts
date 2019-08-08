@@ -60,7 +60,6 @@ export class CodepipelineStack extends cdk.Stack {
     // =====
 
     const outputCodeCommit = new Artifact('code-commit-output');
-    const codeCommitSource = new Artifact('code-commit-source');
     this.projectName = "gohugo";
     const deployArtifacts = new Artifact('cfn_templates')
     
