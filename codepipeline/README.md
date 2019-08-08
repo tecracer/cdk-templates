@@ -96,7 +96,6 @@ git remote add origin https://git-codecommit.eu-central-1.amazonaws.com/v1/repos
 
 Copy the `buildspec.yml` from the `assets/buildspec.yml` to the `quickstart`directory..
 
-cp /Users/silberkopf/Documents/Projekte/cdk/cdk-templates/codepipeline/assets/buildspec.yml .
 
 ## Add theme and content
 
@@ -124,7 +123,7 @@ Goto the AWS Console to CodeBuild and monitor the deployment pipeline.
 
 ### Pipeline view
 
-![Pipeline](/img/da4a80/968f2aca.png)
+![Pipeline](/img/968f2aca.png)
 
 ## Add Content and push
 
