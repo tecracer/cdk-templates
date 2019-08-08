@@ -1,0 +1,37 @@
+version: 0.2
+
+env:
+  variables:
+    hugo_version: "0.56.3"
+
+phases:
+  install:
+    runtime-versions:
+      golang: 1.12
+    commands:
+      - mkdir $HOME/src
+      - cd $HOME/src
+      - pip install --user --upgrade pip
+      - pip install --user awscli
+      - USER_BASE_PATH=$(python -m site --user-base)
+      - export PATH=$PATH:$USER_BASE_PATH/bin
+      - wget "https://github.com/gohugoio/hugo/releases/download/v${hugo_version}/hugo_${hugo_version}_Linux-64bit.deb"
+      - dpkg -i hugo_${hugo_version}_Linux-64bit.deb
+    finally:
+      - hugo version
+  build:
+    commands:
+      - echo fetch theme
+      - cd $CODEBUILD_SRC_DIR
+      - git init
+      - git submodule add  https://github.com/xaprb/story.git themes/story
+      - ls -l 
+      - hugo --baseURL ${baseurl}
+      - echo Build hugo on `date`
+  post_build:
+    commands:
+      - echo Deploy Website
+      - ls -l public/
+      - cd public && aws s3 sync  . s3://${bucket}/ --delete --acl public-read --exclude ".git/*" --exclude "Makefile" 
+
+

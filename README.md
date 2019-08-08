@@ -6,7 +6,7 @@ This is a collection of templates for the cdk
 
 ## Tooling
 
-We use [tasks](https://taskfile.dev/#/) for scripting. 
+We use [tasks](https://taskfile.dev/#/) for scripting.
 
 For switching profiles [awsume](https://github.com/trek10inc/awsume) is used.
 
@@ -57,7 +57,6 @@ Simple Lambda which takes all files from local lambda directory. It create the l
 - lambda with local code (asset)
 - Programming resources *and* Lambda in the same programming language.
 
-
 ## OpsCenter Role
 
 Role for AWS OpsCenter
@@ -71,7 +70,6 @@ Role for AWS OpsCenter
 Use role in any context.
 
 ## vpc-bastion
-
 
 VPC with a bastion host, which is managed by SSM.
 So no security groups.
