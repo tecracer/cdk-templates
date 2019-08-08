@@ -123,7 +123,7 @@ Goto the AWS Console to CodeBuild and monitor the deployment pipeline.
 
 ### Pipeline view
 
-![Pipeline](/img/968f2aca.png)
+![Pipeline](img/968f2aca.png)
 
 ## Add Content and push
 
