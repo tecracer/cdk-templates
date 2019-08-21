@@ -10,12 +10,12 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@types/node": "12.7.1",
+    "@types/node": "12.7.2",
     "typescript": "^3.5.3"
   },
   "dependencies": {
-    "@aws-cdk/aws-lambda": "1.4.x",
-    "@aws-cdk/core": "1.4.x",
+    "@aws-cdk/aws-lambda": "1.5.x",
+    "@aws-cdk/core": "1.5.x",
     "install": "^0.13.0",
     "path": "^0.12.7",
     "source-map-support": "^0.5.13"

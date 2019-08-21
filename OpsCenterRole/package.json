@@ -10,13 +10,13 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@types/node": "12.7.1",
+    "@types/node": "12.7.2",
     "typescript": "^3.5.3",
     "ts-node": "^8.3.0"
   },
   "dependencies": {
-    "@aws-cdk/aws-iam": "1.4.x",
-    "@aws-cdk/core": "1.4.x",
+    "@aws-cdk/aws-iam": "1.5.x",
+    "@aws-cdk/core": "1.5.x",
     "source-map-support": "^0.5.13"
   }
 }
