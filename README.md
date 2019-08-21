@@ -40,6 +40,18 @@ Simple application load balancer with "hello world" webserver on instance. It sp
 - `cdk deploy`
 - Open LoadBalancer DNS in browser
 
+## codepipeline
+
+Deploy a static (hugo) website with CodePipeline and CodeCommit
+
+### codepipeline has examples for
+
+- CodeCommit repository
+- S3 Bucket with website, Bucket policy
+- CodeBuild
+- CodePipeline
+- Output parameters
+
 ## lambda-apigw
 
 Lambda with an api Gateway
