@@ -8,14 +8,6 @@ env:
 tasks:
   build:
     desc: Build js files
-    sources:
-      - lib/*.ts
-      - bin/*.ts
-    generates:
-      - lib/cdk-stack.js
-      - lib/cdk-stack.d.ts
-      - bin/cdk.d.ts
-      - bin/cdk.js
     cmds:
       - npm run build
 

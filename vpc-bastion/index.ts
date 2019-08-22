@@ -28,7 +28,7 @@ class VPCBastionStack extends cdk.Stack {
    new ec2.CfnInstance(this, "Bastion",{
       imageId: linuxImageId,
       instanceType: InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO).toString(),
-      iamInstanceProfile: bastionInstanceProfile.instanceProfileName,
+      iamInstanceProfile: bastionInstanceProfile.ref,
       tags: [{key: "Name", value: "Web"}],
     })
   }

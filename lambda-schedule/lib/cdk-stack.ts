@@ -1,6 +1,3 @@
-
-
-// import apigateway = require("@aws-cdk/aws-apigateway");
 import cdk = require('@aws-cdk/core');
 import lambda = require('@aws-cdk/aws-lambda');
 import path = require('path');
