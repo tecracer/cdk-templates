@@ -53,8 +53,9 @@ export class EC2Stop implements events.IRuleTarget {
      */
     public bind(rule: events.IRule, _id?: string): events.RuleTargetConfig {
         return {
+            // Put your account id here
             id: '',
-            arn: "arn:aws:events:eu-central-1:669453403305:target/stop-instance",
+            arn: "arn:aws:events:eu-central-1:12345678912:target/stop-instance",
             targetResource: this.instance,
             input:  events.RuleTargetInput.fromText(this.instance.ref),
             role: this.role,
