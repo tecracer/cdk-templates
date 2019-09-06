@@ -52,6 +52,18 @@ Deploy a static (hugo) website with CodePipeline and CodeCommit
 - CodePipeline
 - Output parameters
 
+## ec2-autostop
+
+Deploys a Jenkins EC2 instance, which is automatically stopped at a certain time. See `stop-instance.ts``
+
+## ec2-autostop has examples for
+
+- EC2 Userdata in a seperate single files
+- Cloudwatch Event Rule
+- extending the CDK by implementing an interface:
+    `class EC2Stop implements events.IRuleTarget``
+
+
 ## lambda-apigw
 
 Lambda with an api Gateway

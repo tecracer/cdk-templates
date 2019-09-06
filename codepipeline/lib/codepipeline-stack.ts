@@ -39,7 +39,6 @@ export class CodepipelineStack extends cdk.Stack {
       websiteIndexDocument: "index.html",
       websiteErrorDocument: "error.html",
       accessControl: BucketAccessControl.PUBLIC_READ,
-
     });
     const bucketPolicy = new PolicyStatement({
       effect: Effect.ALLOW,
@@ -136,7 +135,7 @@ export class CodepipelineStack extends cdk.Stack {
     new cdk.CfnOutput(this, 'websitebucketout',{
       description: "Bucket name of website bucket",
       value: bucket.bucketName,
-    })
+        })
     new cdk.CfnOutput(this,'repocloneurl',{
       description: "git remote add origin <this>",
       value: repo.repositoryCloneUrlHttp,
