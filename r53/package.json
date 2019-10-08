@@ -11,17 +11,17 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.9.0",
+    "@aws-cdk/assert": "^1.12.0",
     "@types/jest": "^24.0.18",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
-    "aws-cdk": "^1.9.0",
+    "aws-cdk": "^1.12.0",
     "ts-node": "^8.4.1",
     "typescript": "~3.6.3"
   },
   "dependencies": {
-    "@aws-cdk/aws-route53": "^1.9.0",
-    "@aws-cdk/core": "^1.9.0",
+    "@aws-cdk/aws-route53": "^1.12.0",
+    "@aws-cdk/core": "^1.12.0",
     "source-map-support": "^0.5.13"
   }
 }
