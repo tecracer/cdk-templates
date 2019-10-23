@@ -1,8 +1,8 @@
 {
-  "name": "r53",
+  "name": "iam-user",
   "version": "0.1.0",
   "bin": {
-    "r53": "bin/r53.js"
+    "iam-user": "bin/iam-user.js"
   },
   "scripts": {
     "build": "tsc",
@@ -20,7 +20,8 @@
     "typescript": "~3.6.4"
   },
   "dependencies": {
-    "@aws-cdk/aws-route53": "^1.14.0",
+    "@aws-cdk/aws-iam": "^1.14.0",
+    "@aws-cdk/aws-secretsmanager": "^1.14.0",
     "@aws-cdk/core": "^1.14.0",
     "source-map-support": "^0.5.13"
   }
