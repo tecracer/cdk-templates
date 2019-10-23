@@ -10,7 +10,6 @@ class VPCBastionStack extends cdk.Stack {
     new ec2.Vpc(this, 'TheVPC',{
       maxAzs: 2,
     });  
-
     const instanceRole = new iam.Role(this,'ssminstancerole',
     {
       assumedBy: new iam.ServicePrincipal('ec2.amazonaws.com'),

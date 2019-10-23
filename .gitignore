@@ -28,3 +28,9 @@ lambda-simple/package-lock.json
 log
 lambda-simple/bin/cdk-lambda-simple.js
 lambda-schedule/index.html
+iam-user/cdk.out
+iam-user/node_modules
+*.js
+iam-user/lib/iam-user-stack.d.ts
+iam-user/lib/secrets-stack.d.ts
+iam-user/test/iam-user.test.d.ts
