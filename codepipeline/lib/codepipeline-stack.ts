@@ -5,6 +5,7 @@ import { Pipeline, Artifact } from '@aws-cdk/aws-codepipeline';
 import {CodeBuildAction,CodeCommitSourceAction,CodeCommitTrigger } from '@aws-cdk/aws-codepipeline-actions';
 import {PolicyStatement,Effect} from '@aws-cdk/aws-iam';
 import { Bucket, BucketAccessControl } from '@aws-cdk/aws-s3';
+import { RemovalPolicy } from '@aws-cdk/core';
 
 
 export class CodepipelineStack extends cdk.Stack {
@@ -39,6 +40,7 @@ export class CodepipelineStack extends cdk.Stack {
       websiteIndexDocument: "index.html",
       websiteErrorDocument: "error.html",
       accessControl: BucketAccessControl.PUBLIC_READ,
+      removalPolicy: RemovalPolicy.DESTROY
     });
     const bucketPolicy = new PolicyStatement({
       effect: Effect.ALLOW,
