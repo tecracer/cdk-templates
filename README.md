@@ -72,6 +72,11 @@ Deploys a Jenkins EC2 instance, which is automatically stopped at a certain time
 
 Lambda with an api Gateway
 
+## Lambda go
+
+Lambda with go.
+Uses taskfile for compile depencies.
+
 ## lambda-schedule
 
 Simple lambda with CloudWatch event rule for daily triggering.

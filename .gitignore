@@ -34,3 +34,5 @@ iam-user/node_modules
 iam-user/lib/iam-user-stack.d.ts
 iam-user/lib/secrets-stack.d.ts
 iam-user/test/iam-user.test.d.ts
+lambda-go/lambda/dist/main
+*.zip
