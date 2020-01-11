@@ -63,6 +63,11 @@ Deploys a Jenkins EC2 instance, which is automatically stopped at a certain time
 - extending the CDK by implementing an interface:
     `class EC2Stop implements events.IRuleTarget``
 
+## ec2-instanceconnect
+
+- EC2 instance with security group ssh incoming dynamic ip
+- Tasks for enabling and disabling instance metadata service v2
+
 ## iam-user
 
 - generate many users with for loop
