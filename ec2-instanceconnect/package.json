@@ -13,12 +13,12 @@
   "devDependencies": {
     "@aws-cdk/assert": "^1.20.0",
     "@types/jest": "^24.0.25",
-    "@types/node": "13.1.4",
+    "@types/node": "13.1.6",
     "@types/request-promise-native": "^1.0.17",
     "aws-cdk": "^1.20.0",
     "jest": "^24.9.0",
     "ts-jest": "^24.3.0",
-    "ts-node": "^8.5.4",
+    "ts-node": "^8.6.2",
     "typescript": "~3.7.4"
   },
   "dependencies": {

@@ -14,7 +14,7 @@ export class CdkStack extends cdk.Stack {
     const fn = new lambda.Function(this, 'HelloHandler', {
       code: lambda.Code.asset(path.join(__dirname,  '../lambda')),
       handler: 'hello.handler',
-      runtime: lambda.Runtime.NODEJS_8_10,
+      runtime: lambda.Runtime.NODEJS_10_X,
       memorySize: 1024
     });
 

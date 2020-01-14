@@ -36,3 +36,4 @@ iam-user/lib/secrets-stack.d.ts
 iam-user/test/iam-user.test.d.ts
 lambda-go/lambda/dist/main
 *.zip
+lambda-simple/lib/cdk-lambda-simple-stack.js
