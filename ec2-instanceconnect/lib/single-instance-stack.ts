@@ -31,7 +31,7 @@ export class SingleInstanceStack extends Stack {
 
     const instance=new Instance(this, "singleinstance", {
         vpc: vpc.vpc,
-        instanceType: InstanceType.of(InstanceClass.T3, InstanceSize.MICRO),
+        instanceType: InstanceType.of(InstanceClass.T3, InstanceSize.MEDIUM),
         machineImage: linuxImage,
         vpcSubnets: {subnetType: SubnetType.PUBLIC},
         keyName:keyName
