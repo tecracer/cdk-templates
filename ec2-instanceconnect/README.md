@@ -22,7 +22,11 @@ E.g. aws cli (see below).
 There are two stacks, the vpc and the instance itself.
 With deploy (`task deploy`) the first time the vpc stack will be deployed as a dependency.
 
-The tasks `diff` and `deploy` now only work on the instance stack. If you change the name of the instacne stack, do not forget to update in `Taskvars.yml`
+The tasks `diff` and `deploy` now only work on the instance stack. If you change the name of the instance stack, do not forget to update in `Taskvars.yml`
+
+## Environment Variables
+
+The instance will be started with the ssh key set in `KEYNAME`. So try `export KEYNAME=blog` if you have an ssh key named "blog".
 
 ## EC2 instance aws cli
 
