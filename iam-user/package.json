@@ -11,18 +11,18 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.20.0",
-    "@types/jest": "^24.0.25",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.3.0",
-    "aws-cdk": "^1.20.0",
+    "@aws-cdk/assert": "^1.23.0",
+    "@types/jest": "^25.1.2",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.0",
+    "aws-cdk": "^1.23.0",
     "ts-node": "^8.6.2",
-    "typescript": "~3.7.4"
+    "typescript": "~3.7.5"
   },
   "dependencies": {
-    "@aws-cdk/aws-iam": "^1.20.0",
-    "@aws-cdk/aws-secretsmanager": "^1.20.0",
-    "@aws-cdk/core": "^1.20.0",
+    "@aws-cdk/aws-iam": "^1.23.0",
+    "@aws-cdk/aws-secretsmanager": "^1.23.0",
+    "@aws-cdk/core": "^1.23.0",
     "source-map-support": "^0.5.16"
   }
 }

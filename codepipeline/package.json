@@ -10,16 +10,16 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@types/node": "13.1.6",
-    "typescript": "^3.7.4",
+    "@types/node": "13.7.0",
+    "typescript": "^3.7.5",
     "ts-node": "^8.6.2"
   },
   "dependencies": {
-    "@aws-cdk/aws-codebuild": "^1.20.0",
-    "@aws-cdk/aws-codecommit": "^1.20.0",
-    "@aws-cdk/aws-codepipeline": "^1.20.0",
-    "@aws-cdk/aws-codepipeline-actions": "^1.20.0",
-    "@aws-cdk/aws-iam": "^1.20.0",
-    "@aws-cdk/core": "1.20.x"
+    "@aws-cdk/aws-codebuild": "^1.23.0",
+    "@aws-cdk/aws-codecommit": "^1.23.0",
+    "@aws-cdk/aws-codepipeline": "^1.23.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.23.0",
+    "@aws-cdk/aws-iam": "^1.23.0",
+    "@aws-cdk/core": "1.23.x"
   }
 }

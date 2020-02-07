@@ -15,14 +15,14 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/node": "^13.1.6",
-    "typescript": "^3.7.4"
+    "@types/node": "^13.7.0",
+    "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@aws-cdk/aws-autoscaling": "1.20.x",
-    "@aws-cdk/aws-ec2": "1.20.x",
-    "@aws-cdk/aws-elasticloadbalancingv2": "1.20.x",
-    "@aws-cdk/aws-iam": "^1.20.x",
-    "@aws-cdk/core": "1.20.x"
+    "@aws-cdk/aws-autoscaling": "1.23.x",
+    "@aws-cdk/aws-ec2": "1.23.x",
+    "@aws-cdk/aws-elasticloadbalancingv2": "1.23.x",
+    "@aws-cdk/aws-iam": "^1.23.x",
+    "@aws-cdk/core": "1.23.x"
   }
 }
