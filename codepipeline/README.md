@@ -30,8 +30,8 @@ All neccesary steps are included in a `Taskfile.yml`, which is interpreted by **
 3. clone this repository
 4. create a working directory *outside* this repository. We call it `workdir`.
 5. Copy `assets/Taskfile.yml` to `workdir`
-6. Edit copied `Taskfile.yml`
-    - Change line 8 to `CDK_DIR: workdir` 
+6. Edit the copied `Taskfile.yml`
+    - Change line 8 to the path of this directory, e.g. `CDK_DIR: /path/to/cdk-templates/codepipeline` (the idea is to keep your code and the repo code separate)
 
 ### Deployment
 
