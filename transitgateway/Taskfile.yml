@@ -1,0 +1,57 @@
+# https://taskfile.dev
+
+version: '2'
+
+tasks:
+
+  build:
+    sources:
+      - bin/cdk-transitgateway.ts
+      - lib/cdk-transitgateway-stack.ts
+      - lib/vpc-setting.ts
+    generates:
+      - bin/cdk-transitgateway.js
+      - lib/cdk-transitgateway-stack.ts
+      - lib/vpc-setting.ts
+    cmds:
+      - npm run build
+
+ 
+# CDK tasks
+
+  update:
+    desc: install latest cdk and other modules
+    cmds:
+      - ncu -u
+      - npm install
+
+  deploy:
+    desc: deploy stack without asking
+    deps: [build]
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - cdk deploy VPCs --require-approval never --profile $AWSUME_PROFILE
+
+  destroy:
+    desc: destroy stack without asking
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - cdk destroy "*" --force --profile $AWSUME_PROFILE
+
+
+  diff:
+    desc: cdk diff inl. tsc
+    deps: [build]
+    cmds:
+      - cdk diff {{.STACK}}
+
+
+  edge-of-tomorrow:
+    desc: deploy destroy repeat
+    cmds:
+      - task: update
+      - task: deploy
+      - task: destroy
+  

@@ -111,6 +111,11 @@ Use role in any context.
 
 Route 53 Zone with a A Record entry
 
+## Transitgateway
+
+Creates a Transitgateway with two connected VPCs
+
+
 ## vpc-bastion
 
 VPC with a bastion host, which is managed by SSM.
