@@ -9,7 +9,7 @@ This CDK app sets up infrastructure that can be used to demonstrate the integrat
 
 ## Architecture
 
-![Architecture](/architecture.png)
+![Architecture](architecture.png)
 
 This stack builds up a bunch of things:
 
