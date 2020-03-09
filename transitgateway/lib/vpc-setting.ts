@@ -61,7 +61,7 @@ export class VPCSetting extends cdk.Stack {
       tags: [new Tag("Name","private-b-attach")]
     });
     
-    for (var i = 0, len = vpcA.privateSubnets.length; i < len; i++) {
+    for (var i = 0, len = vpcB.privateSubnets.length; i < len; i++) {
       new CfnRoute(this, "tgwPrivVpc"+i,
       {
         routeTableId: vpcB.privateSubnets[i].routeTable.routeTableId,
