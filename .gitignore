@@ -37,3 +37,5 @@ iam-user/test/iam-user.test.d.ts
 lambda-go/lambda/dist/main
 *.zip
 lambda-simple/lib/cdk-lambda-simple-stack.js
+selfEditing/fyn-lock.yaml
+selfEditing/package-lock.json

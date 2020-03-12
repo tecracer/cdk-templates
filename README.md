@@ -103,6 +103,16 @@ Role for AWS OpsCenter
 
 - Create IAM Role with own policy statements
 
+### selfEditing 
+
+Creates a group with all rights for a user to change the *own* credentials and only them.
+
+### selfEditing  has example for
+
+- creating a IAM group
+- add policy statements to the group
+
+
 ### Usage of OpsCenterRole
 
 Use role in any context.
