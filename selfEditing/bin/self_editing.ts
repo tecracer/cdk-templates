@@ -4,4 +4,9 @@ import * as cdk from '@aws-cdk/core';
 import { SelfEditingStack } from '../lib/self_editing-stack';
 
 const app = new cdk.App();
-new SelfEditingStack(app, 'SelfEditingStack');
+new SelfEditingStack(app, 'SelfEditingStack',  {
+    MFAManagementAllowed: true,
+    accessKeyManagementAllowed: true,
+    passwordEditingAllowed: true,
+    sshKeyManagementAllowed: true,
+});
