@@ -39,3 +39,5 @@ lambda-go/lambda/dist/main
 lambda-simple/lib/cdk-lambda-simple-stack.js
 selfEditing/fyn-lock.yaml
 selfEditing/package-lock.json
+transitgateway/fyn-lock.yaml
+transitgateway/package-lock.json
