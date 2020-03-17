@@ -32,7 +32,8 @@ This stack builds up a bunch of things:
 2. Navigate to this directory
 3. Create a new python virtual environment, e.g. `python3 -m venv .env`
 4. Activate the environment using `source .env/bin/activate` on Mac or Linux or run `source.bat` on Windows.
-5. Open `cognito_fargate_demo/cognito_fargate_demo_stack.py` and edit these variables as described in the [blog article](https://aws-blog.de/2020/03/building-a-fargate-based-container-app-with-cognito-authentication.html):
+5. Install dependencies: `pip install -r requirements.txt`
+6. Open `cognito_fargate_demo/cognito_fargate_demo_stack.py` and edit these variables as described in the [blog article](https://aws-blog.de/2020/03/building-a-fargate-based-container-app-with-cognito-authentication.html):
 
     ```python
     APP_DNS_NAME = "cognito-fargate-demo.mb-trc.de"
