@@ -1,0 +1,24 @@
+-e git+git@github.com:ustrahlendorf/cdk-templates.git@b3666617b89201a1eab4701f5640102fe688a55e#egg=alb_py&subdirectory=alb-py
+attrs==19.3.0
+aws-cdk.assets==1.31.0
+aws-cdk.aws-cloudwatch==1.31.0
+aws-cdk.aws-ec2==1.31.0
+aws-cdk.aws-events==1.31.0
+aws-cdk.aws-iam==1.31.0
+aws-cdk.aws-kms==1.31.0
+aws-cdk.aws-lambda==1.31.0
+aws-cdk.aws-logs==1.31.0
+aws-cdk.aws-s3==1.31.0
+aws-cdk.aws-s3-assets==1.31.0
+aws-cdk.aws-sqs==1.31.0
+aws-cdk.aws-ssm==1.31.0
+aws-cdk.core==1.31.0
+aws-cdk.cx-api==1.31.0
+aws-cdk.region-info==1.31.0
+cattrs==1.0.0
+constructs==2.0.0
+jsii==1.1.0
+publication==0.0.3
+python-dateutil==2.8.1
+six==1.14.0
+typing-extensions==3.7.4.1
