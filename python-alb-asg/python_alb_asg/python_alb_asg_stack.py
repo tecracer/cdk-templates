@@ -53,15 +53,23 @@ class PythonAlbAsgStack(core.Stack):
             open=True
         )
 
+        # Create ServiceRole for EC2 instances; enable SSM usage
+        EC2InstanceRole = iam.Role(self, "Role",
+            assumed_by=iam.ServicePrincipal("ec2.amazonaws.com"),
+            managed_policies=[iam.ManagedPolicy.from_aws_managed_policy_name("AmazonSSMManagedInstanceCore")],
+            description="This is a custom role for assuming SSM role"
+        )
+
         # Create an AutoScaling group and add it as a load balancing
         # target to the listener.
         auto_scaling_group = autoscaling.AutoScalingGroup(self, "ASG",
             vpc=vpc,
             min_capacity=2,
             max_capacity=2,
+            role=EC2InstanceRole,
             instance_type=ec2.InstanceType.of(ec2.InstanceClass.BURSTABLE2, ec2.InstanceSize.MICRO),
             machine_image=ec2.AmazonLinuxImage(
-                generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX,
+                generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,
                 edition=ec2.AmazonLinuxEdition.STANDARD,
                 virtualization=ec2.AmazonLinuxVirt.HVM,
                 storage=ec2.AmazonLinuxStorage.GENERAL_PURPOSE
@@ -76,8 +84,5 @@ class PythonAlbAsgStack(core.Stack):
 
         listener.add_targets("ApplicationFleet",
             port=80,
-            targets=[auto_scaling_group],
-            health_check={
-                "port": '80'
-            }
+            targets=[auto_scaling_group]
         )        
