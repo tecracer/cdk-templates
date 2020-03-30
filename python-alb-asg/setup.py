@@ -6,7 +6,7 @@ with open("README.md") as fp:
 
 
 setuptools.setup(
-    name="alb_py",
+    name="python_alb_asg",
     version="0.0.1",
 
     description="An empty CDK Python app",
@@ -15,8 +15,8 @@ setuptools.setup(
 
     author="author",
 
-    package_dir={"": "alb_py"},
-    packages=setuptools.find_packages(where="alb_py"),
+    package_dir={"": "python_alb_asg"},
+    packages=setuptools.find_packages(where="python_alb_asg"),
 
     install_requires=[
         "aws-cdk.core==1.31.0",
