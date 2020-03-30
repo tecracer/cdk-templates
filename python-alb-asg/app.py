@@ -2,7 +2,7 @@
 
 from aws_cdk import core
 
-from alb_py.alb_py_stack import AlbPyStack
+from python_alb_asg.python_alb_asg_stack import PythonAlbAsgStack
 
 
 app = core.App()
@@ -10,7 +10,6 @@ app = core.App()
 Env_Fra = env=core.Environment(region="eu-central-1",account="738155121896")
 Env__Ire = env=core.Environment(region="eu-west-1",account="738155121896")
 
-#AlbPyStack(app, "ALBLayer", env=core.Environment(region="eu-central-1",account="738155121896"))
-AlbPyStack(app, "ALBLayer", env=Env_Fra)
+PythonAlbAsgStack(app, "ALBLayer", env=Env_Fra)
 
 app.synth()
