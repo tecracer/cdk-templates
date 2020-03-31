@@ -10,13 +10,15 @@ class PythonAlbAsgStack(core.Stack):
     def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-        # Setup ALB in VPC with 2 pub + 2 priv Subnet and 1 NATinstance spread over 2 AZs
+        # Setup ALB an AutoScalingGroup with fixed capacity (no scaling event)
+        # a VPC with 2 public + 2 private Subnets, 1 NATinstance spread over 2 AZs
+        # ASG-Instances are configured with an Instance-Role to use SSM and a Web-Server installed through user-data
 
         # Configure the `natGatewayProvider` when defining a Vpc
         nat_gateway_provider = ec2.NatProvider.instance(
             instance_type=ec2.InstanceType("t3.small")
         )
-        # Build a VPC plus Subnet Configuration
+        # Build a VPC plus Subnet Configuration, Routing tables and relevant routes
         vpc = ec2.Vpc(self, "VPC",
             cidr="10.0.0.0/16",
             max_azs=2,
@@ -60,8 +62,7 @@ class PythonAlbAsgStack(core.Stack):
             description="This is a custom role for assuming SSM role"
         )
 
-        # Create an AutoScaling group and add it as a load balancing
-        # target to the listener.
+        # Create an AutoScaling group; define InstanceRole and specify InstanceType
         auto_scaling_group = autoscaling.AutoScalingGroup(self, "ASG",
             vpc=vpc,
             min_capacity=2,
@@ -76,13 +77,15 @@ class PythonAlbAsgStack(core.Stack):
             )
         )
 
-        # read userdata script
-        with open('./userdata/webserver.sh', 'r') as myfile:
-            userdata_script = myfile.read()
-
-        auto_scaling_group.add_user_data(userdata_script)
-
+        # add the AutoScaling group as target to the listener.
         listener.add_targets("ApplicationFleet",
             port=80,
             targets=[auto_scaling_group]
-        )        
+        )
+
+        # read userdata script to install a simple WebServer
+        # on the ASG-Instances
+        with open('./userdata/webserver.sh', 'r') as myfile:
+            userdata_script = myfile.read()
+
+        auto_scaling_group.add_user_data(userdata_script)       
