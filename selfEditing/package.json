@@ -1,8 +1,8 @@
 {
-  "name": "iam-user",
+  "name": "self_editing",
   "version": "0.1.0",
   "bin": {
-    "iam-user": "bin/iam-user.js"
+    "self_editing": "bin/self_editing.js"
   },
   "scripts": {
     "build": "tsc",
@@ -11,18 +11,18 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.27.0",
+    "@aws-cdk/assert": "1.27.0",
     "@types/jest": "^25.1.4",
+    "@types/node": "13.9.1",
+    "aws-cdk": "1.27.0",
     "jest": "^25.1.0",
     "ts-jest": "^25.2.1",
-    "aws-cdk": "^1.27.0",
     "ts-node": "^8.6.2",
-    "typescript": "~3.8.3"
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "@aws-cdk/aws-iam": "^1.27.0",
-    "@aws-cdk/aws-secretsmanager": "^1.27.0",
-    "@aws-cdk/core": "^1.27.0",
+    "@aws-cdk/core": "1.27.0",
     "source-map-support": "^0.5.16"
   }
 }
