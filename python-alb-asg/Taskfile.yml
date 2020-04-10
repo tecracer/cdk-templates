@@ -1,0 +1,51 @@
+# https://taskfile.dev
+
+version: '2'
+
+env:
+  AWS_DEFAULT_REGION: eu-central-1
+
+tasks:
+  build:
+    desc: Build python environment with required modules
+    cmds:
+      - python3 -m venv .env
+      - source .env/bin/activate && pip install -r requirements.txt
+
+  update:
+    desc: install latest cdk and pip
+    cmds:
+      - pip install --upgrade pip
+      - pip install --upgrade aws-cdk.core
+
+  deploy:
+    desc: deploy stack without asking
+    deps: [build]
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - source .env/bin/activate && cdk deploy --require-approval never --profile $AWSUME_PROFILE
+
+  synth:
+    desc: build cf template without deploying
+    deps: [build]
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - source .env/bin/activate && cdk synth --require-approval never --profile $AWSUME_PROFILE
+
+
+  destroy:
+    desc: destroy stack without asking
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - source .env/bin/activate && cdk destroy --force --profile $AWSUME_PROFILE
+
+  edge-of-tomorrow:
+    desc: deploy destroy repeat
+    cmds:
+      - task: update
+      - task: deploy
+      - task: destroy
+
