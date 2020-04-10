@@ -33,3 +33,12 @@ This stack builds up a bunch of things:
 6. Set your Environment as described here: [CDK Environment](https://docs.aws.amazon.com/cdk/latest/guide/environments.html)
 6. Run `cdk synth` to check if the CDK works as expected, you can inspect the template if you're curious.
 7. Run `cdk deploy` to deploy the resources. 
+
+## Useful CDK commands
+
+ * `cdk ls`          list all stacks in the app
+ * `cdk synth`       emits the synthesized CloudFormation template
+ * `cdk deploy`      deploy this stack to your default AWS account/region
+ * `cdk diff`        compare deployed stack with current state
+ * `cdk docs`        open CDK documentation
+
