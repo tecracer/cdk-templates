@@ -26,7 +26,7 @@ This stack builds up a bunch of things:
 ## Steps to deploy
 
 1. Clone or checkout repo/branch (git clone / git checkout)
-2. Navigate to this directory ('<yourDir>'/cdk-templates/python-alb-asg)
+2. Navigate to this directory (\<yourDir\>/cdk-templates/python-alb-asg)
 3. Create a new python virtual environment, e.g. `python3 -m venv .env`
 4. Activate the environment using `source .env/bin/activate` on Mac or Linux or run `source.bat` on Windows.
 5. Install dependencies: `pip install -r requirements.txt`
