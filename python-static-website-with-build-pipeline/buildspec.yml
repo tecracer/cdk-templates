@@ -1,0 +1,42 @@
+version: 0.2
+
+env:
+  variables:
+    hugo_version: "0.64.1"
+    # bucket - set from the outside, S3-Bucket with the website content
+    # baseurl - set from the outside, URL of the website
+
+phases:
+  install:
+    runtime-versions:
+      golang: 1.12
+    commands:
+      - mkdir $HOME/src
+      - cd $HOME/src
+      - pip install --user --upgrade pip
+      - pip install --user awscli
+      - USER_BASE_PATH=$(python -m site --user-base)
+      - export PATH=$PATH:$USER_BASE_PATH/bin
+      - wget "https://github.com/gohugoio/hugo/releases/download/v${hugo_version}/hugo_${hugo_version}_Linux-64bit.deb"
+      - dpkg -i hugo_${hugo_version}_Linux-64bit.deb
+    finally:
+      - hugo version
+  build:
+    commands:
+      - echo Fetching Theme
+      - cd $CODEBUILD_SRC_DIR
+      - cd website
+      - git init
+      # TODO: Add your own theme here!
+      - git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+      - ls -l 
+      - echo Building Website content
+      - hugo --baseURL ${baseurl}
+      - echo Built hugo on `date`
+
+  post_build:
+    commands:
+      - echo Deploying Website to S3
+      - cd $CODEBUILD_SRC_DIR
+      - ls -l website/public
+      - cd website/public && aws s3 sync . s3://${bucket}/ --delete

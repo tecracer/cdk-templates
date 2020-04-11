@@ -19,11 +19,15 @@ setuptools.setup(
     packages=setuptools.find_packages(where="infrastructure"),
 
     install_requires=[
-        "aws-cdk.core==1.31.0",
-        "aws-cdk.aws-s3==1.31.0",
-        "aws-cdk.aws-certificatemanager==1.31.0",
-        "aws-cdk.aws-cloudfront==1.31.0",
-        "aws-cdk.aws-route53-targets==1.31.0",
+        "aws-cdk.core==1.32.2",
+        "aws-cdk.aws-s3==1.32.2",
+        "aws-cdk.aws-certificatemanager==1.32.2",
+        "aws-cdk.aws-cloudfront==1.32.2",
+        "aws-cdk.aws-route53-targets==1.32.2",
+        "aws-cdk.aws-codecommit==1.32.2",
+        "aws-cdk.aws-codebuild==1.32.2",
+        "aws-cdk.aws-codepipeline==1.32.2",
+        "aws-cdk.aws-codepipeline-actions==1.32.2",
     ],
 
     python_requires=">=3.6",
