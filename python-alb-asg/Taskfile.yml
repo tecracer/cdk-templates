@@ -10,12 +10,12 @@ tasks:
     desc: Build python environment with required modules
     cmds:
       - python3 -m venv .env
-      - source .env/bin/activate && pip install --upgrade pip && deactivate
-      - source .env/bin/activate && pip install -r requirements.txt && deactivate
+      - source .env/bin/activate && pip install -r requirements.txt
 
   update:
-    desc: install latest cdk
+    desc: install latest cdk and pip
     cmds:
+      - pip install --upgrade pip
       - pip install --upgrade aws-cdk.core
 
   deploy:
@@ -24,7 +24,7 @@ tasks:
     cmds:
       - cmd: echo Profile $AWSUME_PROFILE
         silent: true
-      - source .env/bin/activate && cdk deploy --require-approval never --profile $AWSUME_PROFILE && deactivate
+      - source .env/bin/activate && cdk deploy --require-approval never --profile $AWSUME_PROFILE
 
   synth:
     desc: build cf template without deploying
@@ -32,7 +32,7 @@ tasks:
     cmds:
       - cmd: echo Profile $AWSUME_PROFILE
         silent: true
-      - source .env/bin/activate && cdk synth --require-approval never --profile $AWSUME_PROFILE && deactivate
+      - source .env/bin/activate && cdk synth --require-approval never --profile $AWSUME_PROFILE
 
 
   destroy:
@@ -40,7 +40,7 @@ tasks:
     cmds:
       - cmd: echo Profile $AWSUME_PROFILE
         silent: true
-      - source .env/bin/activate && cdk destroy --force --profile $AWSUME_PROFILE && deactivate
+      - source .env/bin/activate && cdk destroy --force --profile $AWSUME_PROFILE
 
   edge-of-tomorrow:
     desc: deploy destroy repeat
