@@ -84,7 +84,15 @@ class StaticWebsiteStack(core.Stack):
                             is_default_behavior=True,
                             default_ttl=core.Duration.hours(1)
                         )
-                    ]
+                    ],
+                )
+            ],
+            error_configurations=[
+                # Point CloudFront to our custom 404 error page when a 404 occurs
+                cloudfront.CfnDistribution.CustomErrorResponseProperty(
+                    error_code=404,
+                    response_code=404,
+                    response_page_path="/404.html"
                 )
             ],
             viewer_certificate=cloudfront.ViewerCertificate.from_acm_certificate(

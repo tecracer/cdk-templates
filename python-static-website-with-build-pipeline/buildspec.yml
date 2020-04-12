@@ -31,7 +31,7 @@ phases:
       - git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
       - ls -l 
       - echo Building Website content
-      - hugo --baseURL ${baseurl}
+      - HUGO_UGLYURLS=true hugo --baseURL ${baseurl}
       - echo Built hugo on `date`
 
   post_build:
@@ -40,3 +40,4 @@ phases:
       - cd $CODEBUILD_SRC_DIR
       - ls -l website/public
       - cd website/public && aws s3 sync . s3://${bucket}/ --delete
+
