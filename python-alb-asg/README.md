@@ -33,8 +33,8 @@ This stack builds up a bunch of things:
 1. Create a new python virtual environment, e.g. `python3 -m venv .env`
 1. Activate the environment using `source .env/bin/activate` on Mac or Linux or run `source.bat` on Windows.
 1. Install dependencies: `pip install -r requirements.txt`
-1. Set your AWS profile and region through `awsume <profile_name> --region <region-code>`.  
-Omit *"--region"* to use the *region-code* configured for your *"\<profile_name\>"*.  
+1. Set your AWS profile and region through `awsume <profile_name> --region <region-code>`.\
+Omit *"--region"* to use the *region-code* configured for your *"\<profile_name\>"*.\
 **Optional:** Set your Environment as described here: [CDK Environment](https://docs.aws.amazon.com/cdk/latest/guide/environments.html)
 1. Run `cdk synth` to check if the CDK works as expected, you can inspect the template if you're curious.
 1. Run `cdk deploy` to deploy the resources. 
@@ -42,8 +42,8 @@ Omit *"--region"* to use the *region-code* configured for your *"\<profile_name\
 ### task
 1. Clone or checkout repo/branch (git clone / git checkout)
 1. Navigate to this directory (\<yourDir\>/cdk-templates/python-alb-asg)
-1. Set your AWS profile and region through `awsume <profile_name> --region <region-code>`.  
-Omit *"--region"* to use the *region-code* configured for your *"\<profile_name\>"*.  
+1. Set your AWS profile and region through `awsume <profile_name> --region <region-code>`.\
+Omit *"--region"* to use the *region-code* configured for your *"\<profile_name\>"*.\
 **Optional:** Set your Environment as described here: [CDK Environment](https://docs.aws.amazon.com/cdk/latest/guide/environments.html)
 1. Run `task synth` to check if the CDK works as expected, you can inspect the template if you're curious.
 1. Run `task deploy` to deploy the resources.
