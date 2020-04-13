@@ -40,7 +40,7 @@ tasks:
     desc: install latest cdk
     deps: [ required ]
     cmds:
-      - pip install --upgrade aws-cdk.core
+      - cmd: pip install --upgrade aws-cdk.core
         silent: true
 
   deploy:
