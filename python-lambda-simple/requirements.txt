@@ -19,6 +19,6 @@ constructs==2.0.1
 jsii==1.1.0
 publication==0.0.3
 python-dateutil==2.8.1
--e git+git@github.com:ustrahlendorf/cdk-templates.git@b134998954307030b9cbfc6d6b250ac68fe279da#egg=python_lambda_simple&subdirectory=python-lambda-simple
+-e .
 six==1.14.0
 typing-extensions==3.7.4.2
