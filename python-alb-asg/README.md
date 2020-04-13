@@ -1,6 +1,6 @@
 # VPC - ALB - ASG
 
-> This code is build in dependence on Gernot's [cdk-template](https://github.com/tecracer/cdk-templates/tree/master/alb-update). Ckeck it out if you prefer a similar implementation in Typescript. 
+> This code is build in dependence on Gernot's [cdk-template/alb-update](https://github.com/tecracer/cdk-templates/tree/master/alb-update). Ckeck it out if you prefer a similar implementation in Typescript. 
 
 ## Introduction
 
