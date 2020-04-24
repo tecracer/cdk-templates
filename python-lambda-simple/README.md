@@ -44,10 +44,12 @@ Omit *"--region"* to use the *region-code* configured for your *"\<profile_name\
 Omit *"--region"* to use the *region-code* configured for your *"\<profile_name\>"*.\
 **Optional:** Set your Environment as described here: [CDK Environment](https://docs.aws.amazon.com/cdk/latest/guide/environments.html)
 1. Run `task synth` to check if the CDK works as expected, you can inspect the template if you're curious.
+1. Run `task bootstrap` **IF** deploying your first AWS CDK app containing a lambda function in this region; read more on the **bootstrap** section of the [AWS CDK Tools](https://docs.aws.amazon.com/cdk/latest/guide/tools.html).
 1. Run `task deploy` to deploy the resources.
 1. **(Optional)** Run `task update` to update aws-cdk.core
 
-## Useful CDK commands
+## Useful commands for ... 
+### CDK
 
  * `cdk ls`          list all stacks in the app
  * `cdk synth`       emits the synthesized CloudFormation template
@@ -55,3 +57,14 @@ Omit *"--region"* to use the *region-code* configured for your *"\<profile_name\
  * `cdk diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
 
+### task
+Using the command `task -l`will list all available tasks with a short description for this project.
+
+`task -l`:\
+task: Available tasks for this project:
+* `bootstrap`:    bootstrap the CDK environment if it is not already available
+* `build`:        activate virtual environment, install required python modules
+* `deploy`:       deploy stack without asking
+* `destroy`:      destroy stack without asking
+* `required`:     check required pre-requisites
+* `synth`:        build cf template without deploying
