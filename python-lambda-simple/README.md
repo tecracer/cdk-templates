@@ -8,10 +8,12 @@ Intention of this CDK app is, to demonstrate how to define and deploy a very sim
 For deployment you have two options, either through the *cdk cli* or using *task* with the provided Taskfile.yml.
 
 ## Architecture
+![Architecture](image/Simple-Lambda_arch.png)
 
 This stack builds up:
 
 - A Lambda Function
+- A Basic Execution Role
 - A S3 Bucket to store the Lambda-Function Code\
 ( part of the *CDK bootstrap* process)
 
