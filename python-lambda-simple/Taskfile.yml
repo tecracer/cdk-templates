@@ -1,0 +1,87 @@
+# https://taskfile.dev
+
+version: '2'
+
+vars:
+# define the required applications that has to be installed  
+# tasks will fail if they are not installed
+  REQUIRED_APP_1: cdk
+  REQUIRED_APP_2: python3
+  REQUIRED_APP_3: awsume 
+
+tasks:
+  required:
+    desc: check required pre-requisites
+    preconditions:
+      - sh: "command -v {{.REQUIRED_APP_1}}"
+        msg: "{{.REQUIRED_APP_1}} needs to be installed"
+      - sh: "command -v {{.REQUIRED_APP_2}}"
+        msg: "{{.REQUIRED_APP_2}} needs to be installed"
+      - sh: "command -v {{.REQUIRED_APP_3}}"
+        msg: "{{.REQUIRED_APP_3}} needs to be installed"
+
+  build:
+    desc: activate virtual environment, install required python modules
+    deps: [ required, venv ]
+    cmds:
+      - source .env/bin/activate && pip install --upgrade pip && deactivate
+      - source .env/bin/activate && pip install -r requirements.txt && deactivate      
+    
+  venv:
+# if there is already a .env directory in the current folder, 
+# it will be detected as "up-to-date" and not overwritten by creating a new one  
+    cmds:
+      - cmd: python3 -m venv .env
+        silent: true
+    status:
+      - test -d ./.env
+
+  bootstrap:
+    desc: bootstrap the CDK environment if it is not already available
+    deps: [ required, venv ]
+    cmds:
+      - cmd: echo "bootstrapping in region $AWS_REGION"
+        silent: true
+      - source .env/bin/activate && cdk bootstrap && deactivate
+
+#  update:
+#  update process needs to be evaluated as it has to cover all required pip-modules
+#    desc: install latest cdk
+#    deps: [ required, venv ]
+#    cmds:
+#      - cmd: source .env/bin/activate && pip install --upgrade aws-cdk.core && deactivate
+#        silent: true
+
+  deploy:
+    desc: deploy stack without asking
+    deps: [ build ]
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - source .env/bin/activate && cdk deploy --require-approval never --profile $AWSUME_PROFILE && deactivate
+
+  synth:
+    desc: build cf template without deploying
+    deps: [ build ]
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - source .env/bin/activate && cdk synth --require-approval never --profile $AWSUME_PROFILE && deactivate
+
+
+  destroy:
+    desc: destroy stack without asking
+    deps: [ required ]
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - source .env/bin/activate && cdk destroy --force --profile $AWSUME_PROFILE && deactivate
+
+#  edge-of-tomorrow:
+#  needs to be evaluated together with task update
+#    desc: deploy destroy repeat
+#    cmds:
+#      - task: update
+#      - task: deploy
+#      - task: destroy
+
