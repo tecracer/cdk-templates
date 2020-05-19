@@ -1,6 +1,6 @@
 # Static Website with a build pipeline
 
-> This is code has an accompanying [blog article](https://aws-blog.de/2020/05/building-a-fargate-based-container-app-with-cognito-authentication.html) which I highly recommend you check out before deploying it.
+> This is code has an accompanying [blog article](https://aws-blog.de/2020/05/building-a-static-website-with-hugo-and-the-cdk.html) which I highly recommend you check out before deploying it.
 
 ## Introduction
 
@@ -34,7 +34,7 @@ These steps look a little convoluted - what we're essentially doing is copy the 
 1. Create a new python virtual environment, e.g. `python3 -m venv .env`
 1. Activate the environment using `source .env/bin/activate` on Mac or Linux or run `source.bat` on Windows.
 1. Install all dependencies for python with `pip install -r requirements.txt`
-2. Open `python-static-website-with-hugo-codepipeline-and-cloudfron/app.py` and edit these variables as described in the [blog article](https://aws-blog.de/2020/05/building-a-fargate-based-container-app-with-cognito-authentication.html):
+2. Open `python-static-website-with-hugo-codepipeline-and-cloudfron/app.py` and edit these variables as described in the [blog article](https://aws-blog.de/2020/05/building-a-static-website-with-hugo-and-the-cdk.html):
 
     ```python
     WEBSITE_DOMAIN_NAME = "blog.mb-trc.de"
