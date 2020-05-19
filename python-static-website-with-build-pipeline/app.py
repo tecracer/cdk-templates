@@ -12,7 +12,7 @@ HOSTED_ZONE_NAME = "mb-trc.de"
 WEBSITE_DOMAIN_NAME = "blog.mb-trc.de"
 
 # Insert the value for the certificate stack here
-CLOUDFRONT_CERTIFICATE_ARN = "arn:aws:acm:us-east-1:12312321232:certificate/4d45bfb4-19f4-4dbd-8cd6-b510f4fdf8b4"
+CLOUDFRONT_CERTIFICATE_ARN = "<arn-of-certificate>"
 
 us_east_1 = core.Environment(region="us-east-1")
 eu_central_1 = core.Environment(region="eu-central-1")

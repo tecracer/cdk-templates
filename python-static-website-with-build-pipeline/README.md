@@ -1,6 +1,6 @@
 # Static Website with a build pipeline
 
-> This is code has an accompanying [blog article TODO](https://aws-blog.de/2020/03/building-a-fargate-based-container-app-with-cognito-authentication.html) which I highly recommend you check out before deploying it.
+> This is code has an accompanying [blog article TODO](https://aws-blog.de/2020/05/building-a-fargate-based-container-app-with-cognito-authentication.html) which I highly recommend you check out before deploying it.
 
 ## Introduction
 

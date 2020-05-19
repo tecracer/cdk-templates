@@ -1,5 +1,6 @@
 import setuptools
 
+CDK_VERSION = "1.39.0"
 
 with open("README.md") as fp:
     long_description = fp.read()
@@ -19,15 +20,15 @@ setuptools.setup(
     packages=setuptools.find_packages(where="infrastructure"),
 
     install_requires=[
-        "aws-cdk.core==1.32.2",
-        "aws-cdk.aws-s3==1.32.2",
-        "aws-cdk.aws-certificatemanager==1.32.2",
-        "aws-cdk.aws-cloudfront==1.32.2",
-        "aws-cdk.aws-route53-targets==1.32.2",
-        "aws-cdk.aws-codecommit==1.32.2",
-        "aws-cdk.aws-codebuild==1.32.2",
-        "aws-cdk.aws-codepipeline==1.32.2",
-        "aws-cdk.aws-codepipeline-actions==1.32.2",
+        f"aws-cdk.core=={CDK_VERSION}",
+        f"aws-cdk.aws-s3=={CDK_VERSION}",
+        f"aws-cdk.aws-certificatemanager=={CDK_VERSION}",
+        f"aws-cdk.aws-cloudfront=={CDK_VERSION}",
+        f"aws-cdk.aws-route53-targets=={CDK_VERSION}",
+        f"aws-cdk.aws-codecommit=={CDK_VERSION}",
+        f"aws-cdk.aws-codebuild=={CDK_VERSION}",
+        f"aws-cdk.aws-codepipeline=={CDK_VERSION}",
+        f"aws-cdk.aws-codepipeline-actions=={CDK_VERSION}",
     ],
 
     python_requires=">=3.6",
