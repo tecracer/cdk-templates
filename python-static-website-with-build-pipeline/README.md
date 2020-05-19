@@ -1,6 +1,6 @@
 # Static Website with a build pipeline
 
-> This is code has an accompanying [blog article TODO](https://aws-blog.de/2020/05/building-a-fargate-based-container-app-with-cognito-authentication.html) which I highly recommend you check out before deploying it.
+> This is code has an accompanying [blog article](https://aws-blog.de/2020/05/building-a-fargate-based-container-app-with-cognito-authentication.html) which I highly recommend you check out before deploying it.
 
 ## Introduction
 
@@ -34,7 +34,7 @@ These steps look a little convoluted - what we're essentially doing is copy the 
 1. Create a new python virtual environment, e.g. `python3 -m venv .env`
 1. Activate the environment using `source .env/bin/activate` on Mac or Linux or run `source.bat` on Windows.
 1. Install all dependencies for python with `pip install -r requirements.txt`
-1. Open `python-static-website-with-hugo-codepipeline-and-cloudfron/app.py` and edit these variables as described in the [blog article TODO](https://aws-blog.de/2020/03/building-a-fargate-based-container-app-with-cognito-authentication.html):
+2. Open `python-static-website-with-hugo-codepipeline-and-cloudfron/app.py` and edit these variables as described in the [blog article](https://aws-blog.de/2020/05/building-a-fargate-based-container-app-with-cognito-authentication.html):
 
     ```python
     WEBSITE_DOMAIN_NAME = "blog.mb-trc.de"
@@ -42,7 +42,7 @@ These steps look a little convoluted - what we're essentially doing is copy the 
     HOSTED_ZONE_NAME = "mb-trc.de"
     ```
 
-1. Run `cdk deploy certificate-stack` then look at the outputs and note the Certificate ARN.
+3. Run `cdk deploy certificate-stack` then look at the outputs and note the Certificate ARN.
 
     The Output should look something like this
 
@@ -51,14 +51,14 @@ These steps look a little convoluted - what we're essentially doing is copy the 
     certificate-stack.CertificateArn = arn:aws:acm:us-east-1:123123212312:certificate/4d45bfb4-19f4-4dbd-8cd6-b510f4fdf8b4
     ```
 
-1. Edit the `app.py` and insert the Certificate ARN from the previous step in the Variable `CLOUDFRONT_CERTIFICATE_ARN`.
+4. Edit the `app.py` and insert the Certificate ARN from the previous step in the Variable `CLOUDFRONT_CERTIFICATE_ARN`.
 
-1. Then run `cdk deploy static-website-stack` and note the output of the repo clone URL.
-1. Now run `git init` to initialize an empty git repository in the current working directory
-1. Run `git remote add origin <clone-url>` to link your local repository to the remote repo (if you're using CodeCommit for the first time I recommend a look at the [documentation for setting up authentication](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up.html])).
-1. Run `git add . && git commit -m "Initial Commit"` to commit all of your changes to the local repository.
-1. Run `git push --set-upstream origin master` to push your local repository to CodeCommit (for subsequent pushes `git push` is sufficient)
-1. If you look in AWS you should see CodePipeline build and deploy your code and after 1-2 minutes the website should be available at the domain you configured.
+5. Then run `cdk deploy static-website-stack` and note the output of the repo clone URL.
+6. Now run `git init` to initialize an empty git repository in the current working directory
+7. Run `git remote add origin <clone-url>` to link your local repository to the remote repo (if you're using CodeCommit for the first time I recommend a look at the [documentation for setting up authentication](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up.html])).
+8. Run `git add . && git commit -m "Initial Commit"` to commit all of your changes to the local repository.
+9. Run `git push --set-upstream origin master` to push your local repository to CodeCommit (for subsequent pushes `git push` is sufficient)
+10. If you look in AWS you should see CodePipeline build and deploy your code and after 1-2 minutes the website should be available at the domain you configured.
 
 ### Running your own website
 
