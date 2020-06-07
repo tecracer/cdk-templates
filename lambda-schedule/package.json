@@ -10,19 +10,19 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@types/node": "13.9.0",
-    "typescript": "^3.8.3",
-    "ts-node": "^8.6.2",
-    "aws-cdk": "^1.27.0"
+    "@types/node": "14.0.11",
+    "typescript": "^3.9.5",
+    "ts-node": "^8.10.2",
+    "aws-cdk": "^1.44.0"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigateway": "^1.27.0",
-    "@aws-cdk/aws-events": "^1.27.0",
-    "@aws-cdk/aws-events-targets": "^1.27.0",
-    "@aws-cdk/aws-lambda": "^1.27.0",
-    "@aws-cdk/aws-sns": "^1.27.0",
-    "@aws-cdk/core": "^1.27.0",
+    "@aws-cdk/aws-apigateway": "^1.44.0",
+    "@aws-cdk/aws-events": "^1.44.0",
+    "@aws-cdk/aws-events-targets": "^1.44.0",
+    "@aws-cdk/aws-lambda": "^1.44.0",
+    "@aws-cdk/aws-sns": "^1.44.0",
+    "@aws-cdk/core": "^1.44.0",
     "import": "0.0.6",
-    "source-map-support": "^0.5.16"
+    "source-map-support": "^0.5.19"
   }
 }
