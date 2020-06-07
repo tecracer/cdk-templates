@@ -28,6 +28,10 @@ Or with cdk directly:
 
 Simple application load balancer with "hello world" webserver on instance. It spins up its own vpc for that.
 
+## aws-custom-resource-ses
+
+Using the custom resource helper from the CDK "AwsCustomResource" to create resources not supported by CloudFormation with e few lines of code.
+
 ### alb-update has examples for
 
 - Auto generate AMI for region and OS type

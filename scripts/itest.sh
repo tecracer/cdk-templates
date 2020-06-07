@@ -7,7 +7,7 @@ npm install cdk -g
 mkdir -p log
 echo off
 echo "Testing all"
-for i in alb-update ec2-autostop ec2-instanceconnect lambda-apigw lambda-schedule lambda-simple OpsCenterRole r53 transitgateway vpc-bastion codepipeline iam-user selfEditing
+ for i in alb-update aws-custom-resource-ses ec2-autostop ec2-instanceconnect lambda-apigw lambda-schedule lambda-simple lambda-go OpsCenterRole r53 transitgateway vpc-bastion codepipeline iam-user selfEditing
 do
     echo Testing $i
     date
