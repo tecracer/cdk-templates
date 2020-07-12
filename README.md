@@ -44,6 +44,10 @@ Using the custom resource helper from the CDK "AwsCustomResource" to create reso
 - `cdk deploy`
 - Open LoadBalancer DNS in browser
 
+## cdk-pipeline
+
+Example to use CDK Pipeline Construct introduced in CDK 1.52
+
 ## codepipeline
 
 Deploy a static (hugo) website with CodePipeline and CodeCommit
