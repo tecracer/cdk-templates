@@ -1,7 +1,7 @@
 # CDK Pipeline Construct
 
 
-See Pipeline Documentation and aws-blog.de for details.
+See Pipeline Documentation and  post on [aws-blog.de](https://aws-blog.de/2020/07/the-cdk-pipeline-construct.html) for details.
 
 You have to:
 
