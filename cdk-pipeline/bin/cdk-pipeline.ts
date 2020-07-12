@@ -53,7 +53,7 @@ class PipelineWrapperStack extends Stack {
         pipeline.addApplicationStage(new MyApplication(this, 'Dev', {
             env: {
                 region: 'eu-central-1',
-                account: '832282226273',
+                account: '11111111111',
             }
         }))
 
@@ -66,7 +66,7 @@ new PipelineWrapperStack(app
     {
         env: {
             region: 'eu-central-1',
-            account: '832282226273',
+            account: '11111111111',
         },
 
 
