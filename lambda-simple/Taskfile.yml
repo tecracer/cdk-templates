@@ -5,6 +5,7 @@ version: '2'
 env:
   AWS_DEFAULT_REGION: eu-central-1
 
+
 tasks:
   build:
     desc: Build js files
@@ -32,6 +33,17 @@ tasks:
       - cmd: echo Profile $AWSUME_PROFILE
         silent: true
       - cdk deploy --require-approval never --profile $AWSUME_PROFILE
+
+  deploy-auth-fast:
+    desc: Only Update Lambda Auth code
+    dir: lambda
+    vars:
+      zip: ../dist/hello.zip
+      lambda: CdkLambdaSimpleStack-HelloHandler2E4FBA4D-1HQ0BSAQCW4Z0
+    cmds:
+      - zip -r -dd -q {{.zip}} .
+      - aws lambda update-function-code --function-name  {{.lambda}} --zip-file fileb://{{.zip}}
+
 
   destroy:
     desc: destroy stack without asking
