@@ -42,3 +42,4 @@ selfEditing/package-lock.json
 transitgateway/fyn-lock.yaml
 transitgateway/package-lock.json
 lambda-simple/lib/cdk-lambda-simple-stack.js
+cdk-pipeline/fyn-lock.yaml
