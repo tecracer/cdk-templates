@@ -11,7 +11,7 @@ export class AwsTestJenkinsStack extends cdk.Stack {
     super(scope, id, props);
 
     let clientIps = "10.0.0.0/16"
-    let key = "mykey";
+    //let key = "mykey";
 
     const jenkinsVPC = new Vpc(this, 'TheVPC',{
       maxAzs: 2,
@@ -75,7 +75,7 @@ export class AwsTestJenkinsStack extends cdk.Stack {
 
    const jenkinsServerInstance = new CfnInstance(this, 'JenkinsServer', {
       imageId: linuxImageId,
-      keyName: key,
+      //keyName: key,
       instanceType: instanceTypeString,
       iamInstanceProfile: bastionInstanceProfile.instanceProfileName,
       securityGroupIds: [jenkinsSG.securityGroupId],
