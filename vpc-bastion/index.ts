@@ -7,7 +7,7 @@ import cdk = require('@aws-cdk/core');
 class VPCBastionStack extends cdk.Stack {
   constructor(app: cdk.App, id: string) {
     super(app, id);
-    new ec2.Vpc(this, 'TheVPC',{
+    const bastionVpc = new ec2.Vpc(this, 'TheVPC',{
       maxAzs: 2,
     });  
     const instanceRole = new iam.Role(this,'ssminstancerole',
@@ -29,6 +29,8 @@ class VPCBastionStack extends cdk.Stack {
       instanceType: InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO).toString(),
       iamInstanceProfile: bastionInstanceProfile.ref,
       tags: [{key: "Name", value: "Web"}],
+      subnetId: bastionVpc.publicSubnets[0].subnetId,
+
     })
   }
 }
