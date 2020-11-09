@@ -10,7 +10,9 @@ export class LambdaGoStack extends Stack {
     // The code that defines your stack goes here
     const goFunction = new Function(this, "LambdaGo",
     {
-      code: Code.asset(path.join(__dirname,  '../lambda/dist/main.zip')),
+      code: Code.fromAsset(path.join(__dirname,  '../lambda/dist/main.zip'),{
+        
+      }),
       handler: 'main',
       runtime: Runtime.GO_1_X,
       memorySize: 1024,
