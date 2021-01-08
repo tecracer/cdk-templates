@@ -4,7 +4,7 @@ version: '2'
 
 env:
   AWS_DEFAULT_REGION: eu-central-1
-
+  
 tasks:
   build:
     desc: Build js files
