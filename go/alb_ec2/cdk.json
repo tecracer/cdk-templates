@@ -1,0 +1,8 @@
+{
+  "app": "go mod download && go run alb_ec2.go",
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "@aws-cdk/core:stackRelativeExports": "true",
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true
+  }
+}
