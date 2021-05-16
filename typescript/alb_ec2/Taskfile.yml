@@ -1,0 +1,61 @@
+# https://taskfile.dev
+
+version: '3'
+
+env:
+  AWS_DEFAULT_REGION: eu-central-1
+vars:
+  version: v2.0.0-rc.3
+  constructs: 10.0.0
+  npxoptions: -y
+  
+tasks:
+  build:
+    desc: Build js files
+    sources:
+      - lib/alb-ec2-stack.ts
+      - bin/alb-ec2.ts
+    generates:
+      - lib/alb-ec2-stack.js
+      - lib/alb-ec2-stack.d.ts
+      - bin/alb-ec2.d.ts
+      - bin/alb-ec2.js
+    cmds:
+      - npm run build
+
+  update:
+    desc: install latest cdk and other modules
+    cmds:
+      - yarn add aws-cdk-lib@{{.version}}
+      - yarn add aws-cdk@{{.version}} --dev
+      - yarn add constructs@{{.constructs}}
+
+
+  deploy:
+    desc: deploy stack without asking
+    deps: [build]
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - npx {{.npxoptions}} cdk@{{.version}}  deploy --require-approval never --profile $AWSUME_PROFILE
+
+  test:
+    desc: Test infrastructure
+    cmds:
+      - go test
+
+  destroy:
+    desc: destroy stack without asking
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      -  npx {{.npxoptions}} cdk@{{.version}}  destroy --force --profile $AWSUME_PROFILE
+
+  edge-of-tomorrow:
+    desc: deploy destroy repeat
+    cmds:
+      - task: update
+      - task: deploy
+      - task: test
+      - task: destroy
+
