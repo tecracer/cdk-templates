@@ -1,0 +1,55 @@
+# https://taskfile.dev
+
+version: '3'
+
+env:
+  AWS_DEFAULT_REGION: eu-central-1
+vars:
+  version: v2.0.0-rc.3
+  constructs: 10.0.0
+  npxoptions: -y
+  
+tasks:
+  build:
+    desc: Build js files
+    sources:
+      - lib/opscenter_role-stack.ts
+      - bin/opscenter_role.ts
+    generates:
+      - lib/opscenter_role-stack.js
+      - lib/opscenter_role-stack.d.ts
+      - bin/opscenter_role.d.ts
+      - bin/opscenter_role.js
+    cmds:
+      - yarn build
+
+  update:
+    desc: install latest cdk and other modules
+    cmds:
+      - yarn add aws-cdk-lib@{{.version}}
+      - yarn add aws-cdk@{{.version}} --dev
+      - yarn add constructs@{{.constructs}}
+
+
+  deploy:
+    desc: deploy stack without asking
+    deps: [build]
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - npx {{.npxoptions}} cdk@{{.version}}  deploy --require-approval never --profile $AWSUME_PROFILE
+
+  destroy:
+    desc: destroy stack without asking
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      -  npx {{.npxoptions}} cdk@{{.version}}  destroy --force --profile $AWSUME_PROFILE
+
+  edge-of-tomorrow:
+    desc: deploy destroy repeat
+    cmds:
+      - task: update
+      - task: deploy
+      - task: destroy
+
