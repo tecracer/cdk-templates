@@ -1,0 +1,30 @@
+{
+  "name": "cdk-transitgateway",
+  "version": "0.1.0",
+  "bin": {
+    "cdk-transitgateway": "bin/cdk-transitgateway.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.83.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "14.14.20",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "aws-cdk": "1.83.0",
+    "acorn": ">=8.0.4",
+    "minimist": ">=1.2.5",
+    "ts-node": "^9.1.1",
+    "typescript": "~4.1.3"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-ec2": "^1.83.0",
+    "@aws-cdk/core": "1.83.0",
+    "source-map-support": "^0.5.19"
+  }
+}

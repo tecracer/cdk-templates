@@ -3,7 +3,6 @@ import { AutoScalingGroup } from 'aws-cdk-lib/lib/aws-autoscaling';
 import { AmazonLinuxGeneration, AmazonLinuxImage, InstanceClass, InstanceSize, InstanceType, Vpc } from 'aws-cdk-lib/lib/aws-ec2';
 import { ApplicationLoadBalancer } from 'aws-cdk-lib/lib/aws-elasticloadbalancingv2';
 import { ManagedPolicy, Role, ServicePrincipal } from 'aws-cdk-lib/lib/aws-iam';
-import { SmsSubscription } from 'aws-cdk-lib/lib/aws-sns-subscriptions';
 import { StringParameter } from 'aws-cdk-lib/lib/aws-ssm';
 import { Construct } from 'constructs';
 import fs = require('fs');

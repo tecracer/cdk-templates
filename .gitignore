@@ -44,3 +44,7 @@ transitgateway/package-lock.json
 lambda-simple/lib/cdk-lambda-simple-stack.js
 cdk-pipeline/fyn-lock.yaml
 go-vpc/cdk.context.json
+typescript/alb_ec2/.task
+**/.task
+v1/alb-update/fyn-lock.yaml
+go/alb_ec2/cdk.context.json

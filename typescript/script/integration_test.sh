@@ -7,8 +7,8 @@ mkdir -p log
 echo off
 echo "Testing all Typescript Templates"
 
-for i in alb_ec2 opscenter_role
-#for i in opscenter_role
+#for i in alb_ec2 custom-resource-ses opscenter_role
+for i in custom-resource-ses
 do
     echo Testing $i
     date

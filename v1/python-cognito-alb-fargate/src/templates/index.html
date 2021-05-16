@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Authenticated Webapp</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="color: blue">Hello {{ username }}!</h1>
+  <p>This token is valid until: {{ valid_until_utc }}</p>
+  <h2>Token content: </h2>
+  <pre>{{ jwt_decoded }}</pre>
+  <a href="/logout">Logout</a>
+</body>
+
+</html>

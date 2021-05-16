@@ -1,0 +1,44 @@
+# github.com/Masterminds/semver/v3 v3.1.1
+github.com/Masterminds/semver/v3
+# github.com/aws/aws-cdk-go/awscdk v1.97.0-devpreview
+## explicit
+github.com/aws/aws-cdk-go/awscdk
+github.com/aws/aws-cdk-go/awscdk/assets
+github.com/aws/aws-cdk-go/awscdk/assets/internal
+github.com/aws/aws-cdk-go/awscdk/awscloudwatch
+github.com/aws/aws-cdk-go/awscdk/awscloudwatch/internal
+github.com/aws/aws-cdk-go/awscdk/awsec2
+github.com/aws/aws-cdk-go/awscdk/awsec2/internal
+github.com/aws/aws-cdk-go/awscdk/awsevents
+github.com/aws/aws-cdk-go/awscdk/awsevents/internal
+github.com/aws/aws-cdk-go/awscdk/awsiam
+github.com/aws/aws-cdk-go/awscdk/awsiam/internal
+github.com/aws/aws-cdk-go/awscdk/awskms
+github.com/aws/aws-cdk-go/awscdk/awskms/internal
+github.com/aws/aws-cdk-go/awscdk/awslogs
+github.com/aws/aws-cdk-go/awscdk/awslogs/internal
+github.com/aws/aws-cdk-go/awscdk/awss3
+github.com/aws/aws-cdk-go/awscdk/awss3/internal
+github.com/aws/aws-cdk-go/awscdk/awss3assets
+github.com/aws/aws-cdk-go/awscdk/awss3assets/internal
+github.com/aws/aws-cdk-go/awscdk/cloudassemblyschema
+github.com/aws/aws-cdk-go/awscdk/cxapi
+github.com/aws/aws-cdk-go/awscdk/internal
+github.com/aws/aws-cdk-go/awscdk/jsii
+# github.com/aws/constructs-go/constructs/v3 v3.3.71
+## explicit
+github.com/aws/constructs-go/constructs/v3
+github.com/aws/constructs-go/constructs/v3/jsii
+# github.com/aws/jsii-runtime-go v1.27.0
+## explicit
+github.com/aws/jsii-runtime-go
+github.com/aws/jsii-runtime-go/internal/api
+github.com/aws/jsii-runtime-go/internal/embedded
+github.com/aws/jsii-runtime-go/internal/kernel
+github.com/aws/jsii-runtime-go/internal/kernel/process
+github.com/aws/jsii-runtime-go/internal/objectstore
+github.com/aws/jsii-runtime-go/internal/typeregistry
+# github.com/stretchr/testify v1.7.0
+## explicit
+# github.com/tidwall/gjson v1.7.4
+## explicit

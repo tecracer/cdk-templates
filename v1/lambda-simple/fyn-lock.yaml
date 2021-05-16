@@ -1,0 +1,315 @@
+'@aws-cdk/assets':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-NnepPUuTlZM0uv7kiTZUMuTAwj/hy5KgjAtzpHwWzrBYdh/Ql6+9+fV8B38g70vJP0aMghqCsn4VDiC0oM4KqA==
+  _: 'https://registry.npmjs.org/@aws-cdk/assets/-/assets-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+   minimatch: ^3.0.4
+  peerDependencies:
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+  bundleDependencies:
+   - minimatch
+'@aws-cdk/aws-cloudwatch':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-xe163I6pGiChxGXzO3hYxbp/9y+KcxKtYxlTyl6QOrkPhM1sQ7rVxfJgSGLb9xTy1ex29r0MrmQtJ/S9pd1Lyg==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-cloudwatch/-/aws-cloudwatch-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/core': 1.14.0
+  peerDependencies:
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/core': 1.14.0
+'@aws-cdk/aws-ec2':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-UfhBUYq2e1aokO0nyU8KzzhSz7lz67Wf9RdqoPp4gb8FakS5wHCBvMyHqmwTXXdH4Vl6FYiVp69bWt2ANmc+jw==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-ec2/-/aws-ec2-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/aws-cloudwatch': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-ssm': 1.14.0
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+  peerDependencies:
+   '@aws-cdk/aws-cloudwatch': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-ssm': 1.14.0
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+'@aws-cdk/aws-events':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-7Qaixv1qtGvjwE6u/zpVS8UC3HAwLNansRnnIvd9/EBS8xw8lOxwJcq8hsXdPGiLygcdXuJamsPfHTEOcHBC3Q==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-events/-/aws-events-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/core': 1.14.0
+  peerDependencies:
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/core': 1.14.0
+'@aws-cdk/aws-iam':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-eur34K2n97W/1Nu+gpranBg23Qexvivwh3mL4pEmfprJ+6UfQ0o2KWSAZoTm7CCse4eMQiNGYxU7H8KDcHui7g==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-iam/-/aws-iam-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/region-info': 1.14.0
+  peerDependencies:
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/region-info': 1.14.0
+'@aws-cdk/aws-kms':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-NGbU63i+lV+PpQQInxnzeZpgbSUsKMyrxO7glMem/HKQ0QGrf8JE7ipRBQoHk6b2s3GASlBAN7cyZAcZbmmIRw==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-kms/-/aws-kms-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/core': 1.14.0
+  peerDependencies:
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/core': 1.14.0
+'@aws-cdk/aws-lambda':
+ _latest: 1.14.0
+ _:
+  1.14.x: 1.14.0
+ 1.14.0:
+  top: 1
+  $: sha512-1awtGyQFjbSa/t3UannLuncpqMIEAeY+blWiJW/oDNVySE1NdZ4nmBLSZiNWn3fvY+VTxP/RevkUlXoCHG8O0Q==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-lambda/-/aws-lambda-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/aws-cloudwatch': 1.14.0
+   '@aws-cdk/aws-ec2': 1.14.0
+   '@aws-cdk/aws-events': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-logs': 1.14.0
+   '@aws-cdk/aws-s3': 1.14.0
+   '@aws-cdk/aws-s3-assets': 1.14.0
+   '@aws-cdk/aws-sqs': 1.14.0
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+  peerDependencies:
+   '@aws-cdk/aws-cloudwatch': 1.14.0
+   '@aws-cdk/aws-ec2': 1.14.0
+   '@aws-cdk/aws-events': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-logs': 1.14.0
+   '@aws-cdk/aws-s3': 1.14.0
+   '@aws-cdk/aws-s3-assets': 1.14.0
+   '@aws-cdk/aws-sqs': 1.14.0
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+'@aws-cdk/aws-logs':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-PnB70ULPTdOOt1SfVvLMwqYKjMIZX7XK17ql/wj2AD/CM5sehE4HlCgh5m+A7wa8vCfHedU2l8ErRhUyC7hj2Q==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-logs/-/aws-logs-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/aws-cloudwatch': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/core': 1.14.0
+  peerDependencies:
+   '@aws-cdk/aws-cloudwatch': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/core': 1.14.0
+'@aws-cdk/aws-s3':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-Ii22wa6NcHI8y9KmtFqT8WQglyskgSgGx6FS953ZhP57D1+mi8+plNUi0uIF5gCVq/2TZLHbBCmHR9rMykQRiA==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-s3/-/aws-s3-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/aws-events': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-kms': 1.14.0
+   '@aws-cdk/core': 1.14.0
+  peerDependencies:
+   '@aws-cdk/aws-events': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-kms': 1.14.0
+   '@aws-cdk/core': 1.14.0
+'@aws-cdk/aws-s3-assets':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-+K55RfiNJjY1Jp++r8zv3R+aHeUc8Prs3T5qcwCpe2qzVsYI0efRFKcywkyF3T/vvWTRxCuOjEW/6/BfQxZ+6w==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-s3-assets/-/aws-s3-assets-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/assets': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-s3': 1.14.0
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+  peerDependencies:
+   '@aws-cdk/assets': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-s3': 1.14.0
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+'@aws-cdk/aws-sqs':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-BO6J/k7aUyOgXLHLS2Rhp0sMCr9OgMWZjnyT+ubXS4MYf0VYBUmEtUg72kgCYzP5cpPmn61N50pQnURNKJNQ8A==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-sqs/-/aws-sqs-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/aws-cloudwatch': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-kms': 1.14.0
+   '@aws-cdk/core': 1.14.0
+  peerDependencies:
+   '@aws-cdk/aws-cloudwatch': 1.14.0
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-kms': 1.14.0
+   '@aws-cdk/core': 1.14.0
+'@aws-cdk/aws-ssm':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-tnXHQc+4kn5guYRpGpUjXqRQg7gtMigI6NYv/9Vtb2KZOUeoRNzQZrLL7but7ikV4jRtCCxDZAiSi2fEDG2qxA==
+  _: 'https://registry.npmjs.org/@aws-cdk/aws-ssm/-/aws-ssm-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-kms': 1.14.0
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+  peerDependencies:
+   '@aws-cdk/aws-iam': 1.14.0
+   '@aws-cdk/aws-kms': 1.14.0
+   '@aws-cdk/core': 1.14.0
+   '@aws-cdk/cx-api': 1.14.0
+'@aws-cdk/core':
+ _latest: 1.14.0
+ _:
+  '1.14.0,1.14.x': 1.14.0
+ 1.14.0:
+  top: 1
+  $: sha512-8EJkHlmLA8dL2O/gY68A6vLpR3TtGFIiCCKkXcyIHhKyXva7alCJYR3D7IVdIjtL0Kp1OEiOkPVMGARQdjQysg==
+  _: 'https://registry.npmjs.org/@aws-cdk/core/-/core-1.14.0.tgz'
+  dependencies:
+   '@aws-cdk/cx-api': 1.14.0
+  peerDependencies:
+   '@aws-cdk/cx-api': 1.14.0
+'@aws-cdk/cx-api':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-bTe6OPexb4FdN02GM42Af80Uf1qF/viC3FPwzhkVRdk31ZrSKbxNgh7Ys9OtVTp91U06RNpfWrTjob+DLQJmoQ==
+  _: 'https://registry.npmjs.org/@aws-cdk/cx-api/-/cx-api-1.14.0.tgz'
+  dependencies:
+   semver: ^6.3.0
+  bundleDependencies:
+   - semver
+'@aws-cdk/region-info':
+ _latest: 1.14.0
+ _:
+  1.14.0: 1.14.0
+ 1.14.0:
+  $: sha512-Yw/BuOSh39QelX9X4Hik0Cuq8WFm1KYDU2CJyEnzMrP9dVhlLTrsUnZcQM4kZ8LqY624QmMI1lsq0SE0A1fyeA==
+  _: 'https://registry.npmjs.org/@aws-cdk/region-info/-/region-info-1.14.0.tgz'
+'@types/node':
+ _latest: 12.11.6
+ _:
+  12.11.5: 12.11.5
+ 12.11.5:
+  top: 1
+  $: sha512-LC8ALj/24PhByn39nr5jnTvpE7MujK8y7LQmV74kHYF5iQ0odCPkMH4IZNZw+cobKfSXqaC8GgegcbIsQpffdA==
+  _: 'https://registry.npmjs.org/@types/node/-/node-12.11.5.tgz'
+buffer-from:
+ _latest: 1.1.1
+ _:
+  ^1.0.0: 1.1.1
+ 1.1.1:
+  $: sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
+  _: 'https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz'
+inherits:
+ _latest: 2.0.4
+ _:
+  2.0.3: 2.0.3
+ 2.0.3:
+  $: sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
+  _: 'https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz'
+install:
+ _latest: 0.13.0
+ _:
+  ^0.13.0: 0.13.0
+ 0.13.0:
+  top: 1
+  $: sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==
+  _: 'https://registry.npmjs.org/install/-/install-0.13.0.tgz'
+path:
+ _latest: 0.12.7
+ _:
+  ^0.12.7: 0.12.7
+ 0.12.7:
+  top: 1
+  $: sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=
+  _: 'https://registry.npmjs.org/path/-/path-0.12.7.tgz'
+  dependencies:
+   process: ^0.11.1
+   util: ^0.10.3
+process:
+ _latest: 0.11.10
+ _:
+  ^0.11.1: 0.11.10
+ 0.11.10:
+  $: sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
+  _: 'https://registry.npmjs.org/process/-/process-0.11.10.tgz'
+source-map:
+ _latest: 0.7.3
+ _:
+  ^0.6.0: 0.6.1
+ 0.6.1:
+  $: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+  _: 'https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz'
+source-map-support:
+ _latest: 0.5.13
+ _:
+  ^0.5.13: 0.5.13
+ 0.5.13:
+  top: 1
+  $: sha512-SHSKFHadjVA5oR4PPqhtAVdcBWwRYVd6g6cAXnIbRiIwc2EhPrTuKUBdSLvlEKyIP3GCf89fltvcZiP9MMFA1w==
+  _: 'https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.13.tgz'
+  dependencies:
+   buffer-from: ^1.0.0
+   source-map: ^0.6.0
+typescript:
+ _latest: 3.6.4
+ _:
+  ^3.6.4: 3.6.4
+ 3.6.4:
+  top: 1
+  $: sha512-unoCll1+l+YK4i4F8f22TaNVPRHcD9PA3yCuZ8g5e0qGqlVlJ/8FSateOLLSagn+Yg5+ZwuPkL8LFUc0Jcvksg==
+  _: 'https://registry.npmjs.org/typescript/-/typescript-3.6.4.tgz'
+util:
+ _latest: 0.12.1
+ _:
+  ^0.10.3: 0.10.4
+ 0.10.4:
+  $: sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==
+  _: 'https://registry.npmjs.org/util/-/util-0.10.4.tgz'
+  dependencies:
+   inherits: 2.0.3

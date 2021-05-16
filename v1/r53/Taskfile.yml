@@ -1,0 +1,36 @@
+# https://taskfile.dev
+
+version: '2'
+
+env:
+  AWS_DEFAULT_REGION: eu-central-1
+
+tasks:
+  build:
+    desc: Build js files
+    cmds:
+      - npm run build
+
+  update:
+    desc: install latest cdk and other modules
+    cmds:
+      - ncu -u
+      - npm install
+
+  deploy:
+    desc: deploy stack without asking
+    deps: [build]
+    cmds:
+      - cdk deploy --require-approval never 
+
+  destroy:
+    desc: destroy stack without asking
+    cmds:
+      - cdk destroy --force --profile $AWSUME_PROFILE
+
+  edge-of-tomorrow:
+    desc: deploy destroy repeat
+    cmds:
+      - task: update
+      - task: deploy
+      - task: destroy

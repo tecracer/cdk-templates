@@ -31,6 +31,11 @@ So with a new version:
 - EC2 Userdata in external file
 - Attach Role for SSM Session Manager to instance in ASG
 
-## opscenter_rols
+## custom-resource-ses
+
+- Custom lambda resource
+- calling AWS API from custom resource
+
+## opscenter_role
 
 - Role, Policy and service principal

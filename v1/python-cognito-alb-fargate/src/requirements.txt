@@ -1,0 +1,11 @@
+# Flask
+flask==1.1.1
+
+# JSON Web Token lib
+pyjwt==1.7.1
+
+# Timezone format
+pytz==2019.3
+
+# Gunicorn webserver
+gunicorn==20.0.4

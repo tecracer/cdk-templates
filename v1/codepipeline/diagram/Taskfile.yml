@@ -1,0 +1,29 @@
+# https://taskfile.dev
+
+version: '2'
+
+vars:
+  GREETING: Hello, World!
+  DIAGRAM: codepipeline-hugo.png
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+  docker-build:
+    desc: Build docker container
+    cmds:
+      - docker build --tag=dot .
+  render:
+    desc: render png
+    cmds:
+      - docker run --rm -it -v $PWD:/code -w /code dot:latest dot -Tpng codepipeline-hugo.dot -o {{.DIAGRAM}}
+      - cp {{.DIAGRAM}} ../img
+
+
+  edge-of-tomorrow:
+    desc: deploy destroy repeat
+    cmds:
+      - task: docker-build
+      - task: render

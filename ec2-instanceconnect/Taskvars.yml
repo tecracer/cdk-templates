@@ -1,5 +1,0 @@
-INSTANCEID:  
-  sh: aws cloudformation list-exports --region eu-central-1 --query "Exports[?Name == 'demoInstanceId'].Value" --output text 
-DEPLOYMENTBUCKET:  
-  sh: aws cloudformation describe-stacks --stack-name CDKToolkit --region eu-central-1 --query "Stacks[0].Outputs[?OutputKey == 'BucketName'].OutputValue" --output text 
-STACK: SingleInstanceStack
