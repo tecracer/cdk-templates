@@ -47,3 +47,10 @@ tasks:
       - task: test
       - task: destroy
 
+  cit:
+    desc: cdk infrastructure test
+    cmds:
+      - task: deploy
+      - task: test
+      - task: destroy
+
