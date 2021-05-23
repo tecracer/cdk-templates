@@ -25,7 +25,7 @@ tasks:
     cmds:
       - cmd: echo Profile $AWSUME_PROFILE
         silent: true
-      - npx {{.npxoptions}} cdk@{{.version}}  deploy --require-approval never --profile $AWSUME_PROFILE
+      - npx {{.npxoptions}} cdk@{{.version}}  deploy -c stage=dev --require-approval never --profile $AWSUME_PROFILE
 
   test:
     desc: Test infrastructure

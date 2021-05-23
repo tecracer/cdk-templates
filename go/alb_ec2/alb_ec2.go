@@ -27,6 +27,11 @@ func NewAlbEC2Stack(scope constructs.Construct, id string, props *AlbEC2StackPro
 		sprops = props.StackProps
 	}
 	stack := awscdk.NewStack(scope, &id, &sprops)
+	stage := scope.Node().TryGetContext(aws.String("stage"))
+
+	if stage == "" {
+		stage = "dev"
+	}
 
 	// The code that defines your stack goes here
 	// The code that defines your stack goes here
@@ -59,7 +64,11 @@ func NewAlbEC2Stack(scope constructs.Construct, id string, props *AlbEC2StackPro
 			Role:                             instanceRole,
 		})
 
-	data, err := ioutil.ReadFile("userdata/webserver.sh")
+	userdataFileName := "userdata/webserver-infratest.sh"
+	if stage == "prod"{
+		userdataFileName="userdata/webserver-production.sh"
+	}
+	data, err := ioutil.ReadFile(userdataFileName)
 	if err != nil {
 		panic("File reading error")
 	}
@@ -106,7 +115,7 @@ func NewAlbEC2Stack(scope constructs.Construct, id string, props *AlbEC2StackPro
 func main() {
 	app := awscdk.NewApp(nil)
 
-	NewAlbEC2Stack(app, "VpcStack", &AlbEC2StackProps{
+	NewAlbEC2Stack(app, "AlbInstStack", &AlbEC2StackProps{
 		awscdk.StackProps{
 			Env: env(),
 		},
