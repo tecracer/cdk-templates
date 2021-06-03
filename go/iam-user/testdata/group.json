@@ -1,0 +1,53 @@
+{
+    "Users": [
+        {
+            "Path": "/",
+            "UserName": "student_5",
+            "UserId": "AIDA3SHER36FDPOHLADWI",
+            "Arn": "arn:aws:iam::111122223333:user/student_5",
+            "CreateDate": "2021-06-03T21:12:38+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "student_6",
+            "UserId": "AIDA3SHER36FINBOWY4IC",
+            "Arn": "arn:aws:iam::111122223333:user/student_6",
+            "CreateDate": "2021-06-03T21:12:38+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "student_3",
+            "UserId": "AIDA3SHER36FMZWK2D5QA",
+            "Arn": "arn:aws:iam::111122223333:user/student_3",
+            "CreateDate": "2021-06-03T21:12:38+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "student_2",
+            "UserId": "AIDA3SHER36FOEEPZ2I4R",
+            "Arn": "arn:aws:iam::111122223333:user/student_2",
+            "CreateDate": "2021-06-03T21:12:38+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "student_1",
+            "UserId": "AIDA3SHER36FOOAW7J4HZ",
+            "Arn": "arn:aws:iam::111122223333:user/student_1",
+            "CreateDate": "2021-06-03T21:12:38+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "student_4",
+            "UserId": "AIDA3SHER36FPZOLQQHK2",
+            "Arn": "arn:aws:iam::111122223333:user/student_4",
+            "CreateDate": "2021-06-03T21:12:38+00:00"
+        }
+    ],
+    "Group": {
+        "Path": "/",
+        "GroupName": "IamUserStack-trainigsUserGroup4B8ABB6D-1AP9UWB57DW3C",
+        "GroupId": "AGPA3SHER36FMOLGFVDFJ",
+        "Arn": "arn:aws:iam::111122223333:group/IamUserStack-trainigsUserGroup4B8ABB6D-1AP9UWB57DW3C",
+        "CreateDate": "2021-06-03T21:12:00+00:00"
+    }
+}

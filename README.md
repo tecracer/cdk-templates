@@ -6,10 +6,10 @@ This is a collection of templates for the cdk
 
 ## Directories
 
-`v1` - CDK V1
-`go` - GO CDK V2 
-`python` - GO CDK V2 
-`typescript` - GO CDK V2 
+- `v1` - CDK V1
+- `go` - GO CDK V2 
+- `python` - python CDK V2 
+- `typescript` - typescript CDK V2 
 
 ## Tooling
 
@@ -31,7 +31,7 @@ Or with cdk directly:
 
 ## Templates
 
-Work in Progress (@megaproaktiv May 2021):
+Work in Progress (@megaproaktiv Juni 2021):
 
 - Migration all CDK templates to v2
 

@@ -1,0 +1,15 @@
+{
+    "StackResourceDetail": {
+        "StackName": "IamUserStack",
+        "StackId": "arn:aws:cloudformation:eu-central-1:795048271754:stack/IamUserStack/50ac4f10-c4b0-11eb-aaf9-0607c561c102",
+        "LogicalResourceId": "student1000A84DF",
+        "PhysicalResourceId": "student_1",
+        "ResourceType": "AWS::IAM::User",
+        "LastUpdatedTimestamp": "2021-06-03T21:13:13.887000+00:00",
+        "ResourceStatus": "CREATE_COMPLETE",
+        "Metadata": "{\"aws:cdk:path\":\"IamUserStack/student_1/Resource\"}",
+        "DriftInformation": {
+            "StackResourceDriftStatus": "NOT_CHECKED"
+        }
+    }
+}
