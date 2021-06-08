@@ -8,8 +8,6 @@ env:
   CDK_DEFAULT_ACCOUNT: 
     sh: aws sts get-caller-identity --query Account --output text
 vars:
-  version: v2.0.0-rc.3
-  constructs: v10.0.5
   npxoptions: -y
   
 tasks:
@@ -19,6 +17,7 @@ tasks:
     cmds:
       - go get -d github.com/aws/aws-cdk-go/awscdk/v2@{{.version}}
       - go get -d github.com/aws/constructs-go/constructs/v10@{{.constructs}}
+    
 
   deploy:
     desc: deploy stack without asking
@@ -30,7 +29,8 @@ tasks:
   test:
     desc: Test infrastructure
     cmds:
-      - go test
+      - go test -v 
+    
 
   destroy:
     desc: destroy stack without asking

@@ -48,3 +48,5 @@ typescript/alb_ec2/.task
 **/.task
 v1/alb-update/fyn-lock.yaml
 go/alb_ec2/cdk.context.json
+typescript/custom-resource-ses/package-lock.json
+typescript/custom-resource-ses/yarn.lock

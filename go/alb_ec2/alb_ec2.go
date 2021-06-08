@@ -42,7 +42,7 @@ func NewAlbEC2Stack(scope constructs.Construct, id string, props *AlbEC2StackPro
 	)
 
 	// This is unsecure
-	ssmPolicy := iam.ManagedPolicy_FromAwsManagedPolicyName(aws.String("service-role/AmazonEC2RoleforSSM"));
+	ssmPolicy := iam.ManagedPolicy_FromAwsManagedPolicyName(aws.String("service-role/AmazonSSMManagedInstanceCore"));
 
 	instanceRole := iam.NewRole(stack, aws.String("webinstancerole"),
 		&iam.RoleProps{

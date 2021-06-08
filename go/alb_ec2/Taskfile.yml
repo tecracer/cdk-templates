@@ -8,7 +8,7 @@ env:
   CDK_DEFAULT_ACCOUNT: 
     sh: aws sts get-caller-identity --query Account --output text
 vars:
-  version: v2.0.0-rc.3
+  version: v2.0.0-rc.6
   constructs: v10.0.5
   npxoptions: -y
   

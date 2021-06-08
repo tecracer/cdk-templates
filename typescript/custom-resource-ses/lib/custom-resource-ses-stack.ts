@@ -15,8 +15,8 @@ export class CustomResourceSesStack extends Stack {
 
     new AwsCustomResource(this, 'Identity', {
       onCreate: {
-        service: 'SES',
         action: 'verifyEmailIdentity',
+        service: 'SES',
         parameters: {
           EmailAddress:  emailIdentity,
         },

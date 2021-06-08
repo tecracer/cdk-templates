@@ -7,8 +7,7 @@ mkdir -p log
 echo off
 echo "Testing all GO Templates"
 
-for i in vpc alb_ec2 iam_user
-#for i in alb_ec2
+for i in alb_ec2 iam_user vpc
 do
     echo Testing $i
     date

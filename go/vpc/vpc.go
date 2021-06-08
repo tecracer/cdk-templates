@@ -29,6 +29,7 @@ func NewVpcStack(scope constructs.Construct, id string, props *VpcStackProps) aw
 	myVpc := awsec2.NewVpc(stack, aws.String("MyVpc"),
 		&awsec2.VpcProps{
 			Cidr: jsii.String("10.0.0.0/16"),
+			MaxAzs: aws.Float64(1),
 		},
 	)
 

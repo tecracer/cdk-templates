@@ -8,7 +8,7 @@ Example:
 
 ```bash
 aws secretsmanager create-secret --name trainingsuserpassword --secret-string 0cb3df6667df400
-````
+```
 
 You have to retrieve the secret e.g. with the AWS console and give it to the training users.
 
