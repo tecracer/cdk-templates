@@ -39,3 +39,29 @@ vars:
 - Simple vpc
 - Test for existing resource with terratest via exported parameter
 - Integration test with citec2.GetVpc
+
+
+## State: Test for cdk v2.0.0-rc.7
+
+
+```bash
+ ./script/integration_test.sh
+off
+Testing all GO Templates
+Testing test-alb_ec2
+Mi  9 Jun 2021 23:03:40 CEST
+✅ test-alb_ec2 OK
+##############################
+Testing test-iam-user
+Mi  9 Jun 2021 23:11:23 CEST
+✅ test-iam-user OK
+##############################
+Testing test-lambda-simple
+Mi  9 Jun 2021 23:13:42 CEST
+✅ test-lambda-simple OK
+##############################
+Testing test-vpc
+Mi  9 Jun 2021 23:16:14 CEST
+✅ test-vpc OK
+##############################
+```
