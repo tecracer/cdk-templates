@@ -7,7 +7,7 @@ The inital password is stored in SecretsManager as *trainingsuserpassword*.
 Example:
 
 ```bash
-aws secretsmanager create-secret --name trainingsuserpassword --secret-string 0cb3df6667df400
+aws secretsmanager create-secret --name trainingsuserpassword --secret-string "0cb3dF666#df400"
 ```
 
 You have to retrieve the secret e.g. with the AWS console and give it to the training users.
@@ -15,9 +15,4 @@ You have to retrieve the secret e.g. with the AWS console and give it to the tra
 After that you may attach profiles to the  trainigsUserGroup.
 
 After the training, just delete the Stacks with `task destroy`.
-## Useful commands
 
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
- * `go test`         run unit tests

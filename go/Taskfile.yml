@@ -1,0 +1,63 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  alb_ec2:
+    taskfile: ./alb_ec2/Taskfile.yml
+    dir: ./alb_ec2
+  iam-user:
+    taskfile: ./iam-user/Taskfile.yml
+    dir: ./iam-user
+  lambda-simple:
+    taskfile: ./lambda-simple/Taskfile.yml
+    dir: ./lambda-simple  
+  vpc:
+    taskfile: ./vpc/Taskfile.yml
+    dir: ./vpc
+
+  
+# Versions for all subdirs
+vars:
+  version: v2.0.0-rc.7
+  constructs: v10.0.5
+
+tasks:
+  test-all:
+    desc: Run all tests
+    cmds:
+      - task: test-iam-user
+
+  test-alb_ec2:
+    desc: Integration Test for all stacks
+    cmds:
+      - task: alb_ec2:update
+      - task: alb_ec2:deploy
+      - task: alb_ec2:test
+      - task: alb_ec2:destroy
+
+
+  test-iam-user:
+    desc: Integration Test for all stacks
+    cmds:
+      - task: iam-user:update
+      - task: iam-user:deploy
+      - task: iam-user:test
+      - task: iam-user:destroy
+    
+
+  test-lambda-simple:
+    desc: Integration Test for all stacks
+    cmds:
+      - task: lambda-simple:update
+      - task: lambda-simple:deploy
+      - task: lambda-simple:test
+      - task: lambda-simple:destroy
+    
+  test-vpc:
+    desc: Integration Test for all stacks
+    cmds:
+      - task: vpc:update
+      - task: vpc:deploy
+      - task: vpc:test
+      - task: vpc:destroy

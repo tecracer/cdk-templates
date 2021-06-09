@@ -7,10 +7,7 @@ env:
   CDK_DEFAULT_REGION: eu-central-1
   CDK_DEFAULT_ACCOUNT: 
     sh: aws sts get-caller-identity --query Account --output text
-vars:
-  version: v2.0.0-rc.6
-  constructs: v10.0.5
-  npxoptions: -y
+
   
 tasks:
  
@@ -30,7 +27,7 @@ tasks:
   test:
     desc: Test infrastructure
     cmds:
-      - go test
+      - go test -v
 
   destroy:
     desc: destroy stack without asking
