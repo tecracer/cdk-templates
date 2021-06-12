@@ -1,8 +1,7 @@
-package main
+package alb_ec2
 
 import (
 	"io/ioutil"
-	"os"
 	// CDK
 	awscdk "github.com/aws/aws-cdk-go/awscdk/v2"
 	autoscaling "github.com/aws/aws-cdk-go/awscdk/v2/awsautoscaling"
@@ -109,23 +108,3 @@ func NewAlbEC2Stack(scope constructs.Construct, id string, props *AlbEC2StackPro
 	return stack
 }
 
-func main() {
-	app := awscdk.NewApp(nil)
-
-	NewAlbEC2Stack(app, "AlbInstStack", &AlbEC2StackProps{
-		awscdk.StackProps{
-			Env: env(),
-		},
-	})
-
-	app.Synth(nil)
-}
-
-// env determines the AWS environment (account+region) in which our stack is to
-// be deployed. For more information see: https://docs.aws.amazon.com/cdk/latest/guide/environments.html
-func env() *awscdk.Environment {
-	return &awscdk.Environment{
-		Account: aws.String(os.Getenv("CDK_DEFAULT_ACCOUNT")),
-		Region:  aws.String(os.Getenv("CDK_DEFAULT_REGION")),
-	}
-}
