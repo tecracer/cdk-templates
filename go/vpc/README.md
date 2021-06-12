@@ -20,3 +20,12 @@ Get GO SDK vpc type with stack and construct name:
 ```go
 vpc,err := ec2.GetVpc(aws.String("VpcStack"), aws.String("MyVpc"))
 ```
+
+## Stack / Unit Test 
+
+Look for values in the generated json.
+
+```go
+	cidrrange := template.Get("Resources.MyVpcF9F0CA6F.Properties.CidrBlock").String()
+	assert.Equal(t, "10.0.0.0/16", cidrrange, "Cidr Range should be /16")
+``    

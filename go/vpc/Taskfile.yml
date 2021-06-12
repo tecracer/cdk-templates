@@ -8,6 +8,11 @@ env:
   CDK_DEFAULT_ACCOUNT: 
     sh: aws sts get-caller-identity --query Account --output text
 
+# Uncomment if calling task from this directory,
+# not from uper directory
+vars:
+  version: v2.0.0-rc.7
+  constructs: v10.0.5      
   
 tasks:
  
@@ -25,12 +30,6 @@ tasks:
         silent: true
       - npx {{.npxoptions}} cdk@{{.version}}  deploy --require-approval never --profile $AWSUME_PROFILE
 
-  test:
-    desc: Test infrastructure
-    cmds:
-      - go test -v 
-    
-
   destroy:
     desc: destroy stack without asking
     cmds:
@@ -46,3 +45,14 @@ tasks:
       - task: test
       - task: destroy
 
+
+  test:
+    desc: Unit Test Cloudformatio generation
+    cmds:
+      - go test -short -v
+    silent: true
+
+  itest:
+    desc: Test infrastructure
+    cmds:
+      - go test  -v
