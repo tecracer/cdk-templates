@@ -21,11 +21,24 @@ vars:
 - dev and production stage
 - test with url: `http_helper.HttpGetWithRetry`
 
+## custom_resource_ses
+
+- calling a Lambda aka custom resource to make an api call for not supported constructs
+See [Blog Bridging the terraform - CloudFormation gap ](https://aws-blog.de/2020/06/bridging-the-terraform-cloudformation-gap.html)
+
 ## iam_user
 
 - IAM User as loop
 - encrypted password from secrets manager
 - Integration Test with cit/getUser
+
+## Lambda go
+
+- Lambda function also in go
+- Unit Test if Lambda resource is included in generated CloudFormation
+- Integration test with citlambda.GetFunctionConfiguration
+- Application test, invoking the lambda
+
 
 ## Lambda simple
 
