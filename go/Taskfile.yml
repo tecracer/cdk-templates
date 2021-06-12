@@ -11,12 +11,12 @@ includes:
     dir: ./iam-user
   lambda-simple:
     taskfile: ./lambda-simple/Taskfile.yml
-    dir: ./lambda-simple  
+    dir: ./lambda-simple
   vpc:
     taskfile: ./vpc/Taskfile.yml
     dir: ./vpc
 
-  
+
 # Versions for all subdirs
 vars:
   version: v2.0.0-rc.7
@@ -33,7 +33,7 @@ tasks:
     cmds:
       - task: alb_ec2:update
       - task: alb_ec2:deploy
-      - task: alb_ec2:test
+      - task: alb_ec2:itest
       - task: alb_ec2:destroy
 
 
@@ -44,7 +44,7 @@ tasks:
       - task: iam-user:deploy
       - task: iam-user:test
       - task: iam-user:destroy
-    
+
 
   test-lambda-simple:
     desc: Integration Test for all stacks
@@ -53,11 +53,11 @@ tasks:
       - task: lambda-simple:deploy
       - task: lambda-simple:test
       - task: lambda-simple:destroy
-    
+
   test-vpc:
     desc: Integration Test for all stacks
     cmds:
       - task: vpc:update
       - task: vpc:deploy
-      - task: vpc:test
+      - task: vpc:itest
       - task: vpc:destroy

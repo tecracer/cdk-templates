@@ -4,11 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"reporting"
-
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
-	"github.com/aws/aws-sdk-go-v2/config"
+
 )
 
 // HandleRequest S3 Event

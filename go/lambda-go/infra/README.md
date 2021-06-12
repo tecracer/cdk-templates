@@ -1,14 +1,17 @@
-# Welcome to your CDK Go project!
+# Lambda Function with GO runtime
 
-This is a blank project for Go development with CDK.
 
-**NOTICE**: Go support is still in Developer Preview. This implies that APIs may
-change while we address early feedback from the community. We would love to hear
-about your experience through GitHub issues.
 
-## Useful commands
+## Test
 
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
- * `go test`         run unit tests
+### Stack
+
+Testing the cloudformation
+
+### Cit
+
+Testing the created physical resource
+
+### App
+
+Testing the response from the lambda function

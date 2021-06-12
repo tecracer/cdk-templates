@@ -7,9 +7,9 @@ This is a collection of templates for the cdk
 ## Directories
 
 - `v1` - CDK V1
-- `go` - GO CDK V2 
-- `python` - python CDK V2 
-- `typescript` - typescript CDK V2 
+- `go` - GO CDK V2
+- `python` - python CDK V2
+- `typescript` - typescript CDK V2
 
 ## Tooling
 
@@ -36,3 +36,16 @@ Work in Progress (@megaproaktiv Juni 2021):
 - Migration all CDK templates to v2
 
 See v2 for "old" templates
+
+## Troubleshooting
+
+#### You get an cdk error about the syntax.
+
+The Taskfile setting deploy with the environment variable "AWSUME_PROFILE".
+This is set automatically of you use `awsume`. If not, just export your profile:
+
+```bash
+export AWSUME_PROFILE=default
+```
+
+Replace "default" with the name of your AWS profile.

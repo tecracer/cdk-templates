@@ -1,5 +1,5 @@
 {
-  "app": "go mod download && go run lambda-go.go",
+  "app": "go mod download && go run main/main.go",
   "context": {
     "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
     "@aws-cdk/core:stackRelativeExports": "true",
