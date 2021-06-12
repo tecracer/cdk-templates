@@ -1,0 +1,35 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+
+  build:
+    desc: build go
+    cmds:
+      - env GOOS=linux go build -ldflags="-s -w" -o ../dist/main main/main.go
+      - chmod +x ../dist/main
+      - cd ../dist && zip main.zip main
+    sources:
+      - ./*.go
+      - main/*.go
+    generates:
+      - ../dist/main
+    silent: true
+
+  fastdeploy:
+    desc: Deploy only lambda
+    deps: [build]
+    vars:
+      FN:      
+        sh: aws ssm get-parameter --name "function" --query "Parameter.Value" --output text
+    cmds:
+      - aws lambda update-function-code --function-name  {{.FN}} --zip-file fileb://../dist/main.zip
+
+  test:
+    desc: all go test
+    cmds:
+      - go test    
