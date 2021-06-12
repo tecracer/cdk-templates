@@ -28,8 +28,12 @@ tasks:
   test:
     desc: Test infrastructure
     cmds:
-      - go test -v 
+      - go test -short -v
     
+  itest:
+    desc: Test infrastructure
+    cmds:
+      - go test  -v    
 
   destroy:
     desc: destroy stack without asking

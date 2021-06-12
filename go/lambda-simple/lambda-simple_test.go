@@ -31,7 +31,9 @@ func TestLambdaSimpleStack(t *testing.T) {
 }
 
 func TestCitLambda(t *testing.T){
-
+	if testing.Short() {
+        t.Skip("skipping integration test in short mode.")
+    }
 	gotFc, err := citlambda.GetFunctionConfiguration(aws.String("LambdaSimpleStack"),
 	aws.String("HelloHandler"))
 	assert.Nil(t, err, "GetFunctionConfiguration should return no error")
