@@ -8,7 +8,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/config v1.3.0
 	github.com/aws/aws-sdk-go-v2/service/lambda v1.3.1
 	github.com/aws/constructs-go/constructs/v10 v10.0.5
-	github.com/megaproaktiv/cit v0.1.12
+	github.com/megaproaktiv/cit v0.1.13-0.20210613144206-8bf37723dcef
 	github.com/pkg/errors v0.9.1 // indirect
 
 	// for testing

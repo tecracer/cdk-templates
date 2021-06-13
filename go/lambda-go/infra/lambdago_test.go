@@ -79,3 +79,16 @@ func TestLambdaGoApp(t *testing.T){
 	
 }
 
+func TestLambdaGoAppCit(t *testing.T){
+	if testing.Short() {
+		t.Skip("skipping integration test in short mode.")
+    }
+	
+	payload, err := citlambda.InvokeFunction(
+		aws.String("LambdaGoStack"),
+		aws.String("HelloHandler"),
+		aws.String("testdata/test-event-1.json" ))
+	assert.NilError(t, err, "Invoke should give no error")
+	assert.Equal(t,"\"Done\"",*payload)
+	
+}
