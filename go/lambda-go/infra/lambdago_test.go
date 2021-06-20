@@ -90,5 +90,4 @@ func TestLambdaGoAppCit(t *testing.T){
 		aws.String("testdata/test-event-1.json" ))
 	assert.NilError(t, err, "Invoke should give no error")
 	assert.Equal(t,"\"Done\"",*payload)
-	
 }

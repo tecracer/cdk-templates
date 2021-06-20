@@ -13,5 +13,6 @@ require (
 
 	// for testing
 	github.com/tidwall/gjson v1.7.4
+	golang.org/x/sys v0.0.0-20210611083646-a4fc73990273 // indirect
 	gotest.tools v2.2.0+incompatible
 )

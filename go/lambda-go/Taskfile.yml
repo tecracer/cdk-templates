@@ -55,29 +55,31 @@ tasks:
 
   cit:
     dir: infra
-    desc: cdk infrastructure test
+    desc: cdk infrastructure test whole cycle
     cmds:
       - task: deploy
       - task: test
       - task: destroy
 
-  test:
+  test-unit:
     dir: infra
-    desc: Unit Test Cloudformatio generation
+    desc: Unit Test CloudFormation generation
     cmds:
       - go test -short -v
     silent: true
 
-  itest:
+  test-infra:
     dir: infra
     desc: Test infrastructure
     cmds:
       - go test  -v
 
-  app-test:
+  test-app:
     desc: Test lambda go app
+    dir: infra
     cmds:
-      - task: lambda:test
+      - go test  -v
+      
 
   app-build:
     desc: Build lambda go app 
