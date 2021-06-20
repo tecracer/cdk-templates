@@ -10,7 +10,7 @@ vars:
   constructs: v10.0.5
 ```
 
-2) Call `script/test_all.sh``
+2) Call `script/test_all.sh`
 
 ## alb-asg
 
