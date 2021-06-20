@@ -1,0 +1,22 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  alb-asg:
+    taskfile: ./alb-asg/Taskfile.yml
+    dir: ./alb-asg
+
+vars:
+  version: v2.0.0-rc.8
+  constructs: v10.0.5
+
+tasks:
+
+
+  test-alb-asg:
+    desc: Integration Test for all stacks
+    cmds:
+      - task: alb-asg:deploy
+      - task: alb-asg:test
+      - task: alb-asg:destroy

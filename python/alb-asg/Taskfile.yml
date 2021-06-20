@@ -1,0 +1,66 @@
+# https://taskfile.dev
+
+version: '3'
+
+env:
+  AWS_DEFAULT_REGION: eu-central-1
+  CDK_DEFAULT_REGION: eu-central-1
+  CDK_DEFAULT_ACCOUNT:
+    sh: aws sts get-caller-identity --query Account --output text
+
+# Uncomment if calling task from this directory,
+# not from uper directory
+#vars:
+#  version: v2.0.0-rc.7
+# constructs: v10.0.5
+
+tasks:
+  deploy:
+    desc: deploy stack without asking
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      - npx {{.npxoptions}} cdk@{{.version}}  deploy -c stage=dev --require-approval never --profile $AWSUME_PROFILE
+
+
+  destroy:
+    desc: destroy stack without asking
+    cmds:
+      - cmd: echo Profile $AWSUME_PROFILE
+        silent: true
+      -  npx {{.npxoptions}} cdk@{{.version}}  destroy --force --profile $AWSUME_PROFILE
+
+  edge-of-tomorrow:
+    desc: deploy destroy repeat
+    cmds:
+      - task: deploy
+      - task: test
+      - task: destroy
+
+  cit:
+    desc: cdk infrastructure test
+    cmds:
+      - task: deploy
+      - task: test
+      - task: destroy
+
+  test:
+    desc: Unit Test Cloudformation generation
+    cmds:
+      - go test -v --tags=all
+    silent: true
+
+  test-unit:
+    desc: Unit Test (Template)
+    cmds:
+      - go test  --tags=unit
+
+  test-integ:
+    desc: Integration Test (resource)
+    cmds:
+      - go test  --tags=integ
+
+  test-app:
+    desc: Application Test 
+    cmds:
+      - go test  --tags=app
