@@ -55,6 +55,7 @@ func TestAlbPhysicalResource( t *testing.T){
 	// Just read anything from alb
 	applicationType := awselbv2types.LoadBalancerTypeEnumApplication
 	assert.Equal(t, applicationType, alb.Type)
+	assert.Equal(t, 1, len(alb.SecurityGroups), "One SecurityGroup should be attached")
 }
 
 func TestAlbInstStack(t *testing.T) {
