@@ -10,5 +10,6 @@ require (
 	github.com/gruntwork-io/terratest v0.34.7
 	github.com/megaproaktiv/cit v0.1.12
 	github.com/tidwall/gjson v1.8.0
+	golang.org/x/sys v0.1.0 // indirect
 	gotest.tools v2.2.0+incompatible
 )

@@ -43,3 +43,5 @@ vpc-bastion/node_modules
 vpc-bastion/package-lock.json
 go/lambda-go/dist/main
 go/lambda-go/infra/.vscode
+
+.DS_Store
