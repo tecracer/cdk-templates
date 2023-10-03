@@ -45,3 +45,4 @@ go/lambda-go/dist/main
 go/lambda-go/infra/.vscode
 
 .DS_Store
+go/aurora/dist
